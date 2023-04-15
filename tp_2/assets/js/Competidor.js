@@ -1,8 +1,8 @@
 class Competidor {
+
 	constructor(
 		GAL,apellido,nombre,DU,fechaNac,paisOrigen,
-        graduacion,clasificacionGen,email,genero
-	) {
+        graduacion,clasificacionGen,email,genero) {
 		this.GAL = GAL;
 		this.apellido = apellido;
 		this.nombre = nombre;

@@ -6,14 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, minimum-scale=1.0">
     <script src="https://kit.fontawesome.com/84a9afed55.js" crossorigin="anonymous"></script>
-    <link href="http://localhost/PWA/pwafi/tpos/tp_1_ejercicio_11/assets/themes/bootstrap-5.2.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="">
-    <link rel="stylesheet" href="http://localhost/PWA/pwafi/tpos/tp_1_ejercicio_11/assets/css/estilos.css">
-    <script src="http://localhost/PWA/pwafi/tpos/tp_1_ejercicio_11/assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
-    <script src="http://localhost/PWA/pwafi/tpos/tp_2/assets/js/competidor.js"></script>
-    <script src="http://localhost/PWA/pwafi/tpos/tp_2/assets/js/main.js"></script>
+    <link href="http://localhost/pwa/escandalosos/TP_2/assets/themes/bootstrap-5.2.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="">
+    <link rel="stylesheet" href="http:/localhost/pwa/escandalosos/TP_2/assets/css/estilos.css">
+    <script src="http://localhost/pwa/escandalosos/TP_2/assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
+    <script src="http://localhost/pwa/escandalosos/TP_2/assets/js/competidor.js"></script>
+    <script src="http://localhost/pwa/escandalosos/TP_2/assets/js/main.js"></script>
 
     <link rel="icon" href="http://localhost/PWA/pwafi/TP1/assets/img/fabiconProyec.svg">
-</head>
+</head> 
 <body>
 <div class="container-fluid">  
     <header>
