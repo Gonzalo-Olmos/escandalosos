@@ -4,7 +4,7 @@
   <form class="row g-3" id="competidorForm" novalidate>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Legajo</label>
-    <input type="text" class="form-control form-competidor" id="validationCustom01"  pattern="^[a-zA-Z]{3}[0-9]{7}$" value="" maxlength="8" required>
+    <input type="text" class="form-control form-competidor" id="validationCustom01"  pattern="^[a-zA-Z]{3}[0-9]{7}$" value="" maxlength="10" required>
     <div class="valid-feedback">
       Correcto!
     </div>
@@ -34,17 +34,7 @@
     </div>
   </div>
  
-  <div class="col-md-4">
-    <label for="validationCustom04" class="form-label">Graduación</label>
-    <input type="text" class="form-control form-competidor" id="validationCustom04" value="" required>
-    <div class="valid-feedback">
-      Correcto!
-    </div>
-    <div class="invalid-feedback">
-      Debe ingresar una graducion valida.
-    </div>
-  </div>
-
+  
   <div class="col-md-4">
     <label for="validationCustom10" class="form-label">DU</label>
     <input type="text" class="form-control form-competidor" id="validationCustom10" value="" required>
@@ -64,6 +54,30 @@
     </div>
     <div class="invalid-feedback">
       Debe ingresar una fecha de nacimiento valida.
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="paisOrigen" class="form-label">Pais de Origen</label>
+    <select class="form-select form-competidor" id="paisOrigen" required>
+      <option selected disabled value="">Seleccionar Pais de Origen</option>
+    </select>
+    <div class="valid-feedback">
+      Correcto!
+    </div>
+    <div class="invalid-feedback">
+      Debe seleccionar un pais valido.
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="validationCustom04" class="form-label">Graduación</label>
+    <input type="text" class="form-control form-competidor" id="validationCustom04" value="" required>
+    <div class="valid-feedback">
+      Correcto!
+    </div>
+    <div class="invalid-feedback">
+      Debe ingresar una graducion valida.
     </div>
   </div>
 
@@ -104,18 +118,7 @@
     </div>
   </div>
 
-  <div class="col-md-4">
-    <label for="paisOrigen" class="form-label">Pais de Origen</label>
-    <select class="form-select form-competidor" id="paisOrigen" required>
-      <option selected disabled value="">Seleccionar Pais de Origen</option>
-    </select>
-    <div class="valid-feedback">
-      Correcto!
-    </div>
-    <div class="invalid-feedback">
-      Debe seleccionar un pais valido.
-    </div>
-  </div>
+  
 
     <div class="col-12">
       <button class="btn btn-primary" type="submit">Submit form</button>

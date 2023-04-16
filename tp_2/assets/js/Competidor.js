@@ -1,5 +1,5 @@
 class Competidor {
-
+    
 	constructor(
 		GAL,apellido,nombre,DU,fechaNac,paisOrigen,
         graduacion,clasificacionGen,email,genero) {
