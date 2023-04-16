@@ -4,7 +4,7 @@
   <form class="row g-3" id="competidorForm" novalidate>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Legajo</label>
-    <input type="text" class="form-control form-competidor" id="validationCustom01"  pattern="^[a-zA-Z]{3}[0-9]{7}$" value="" maxlength="8" required>
+    <input type="text" class="form-control form-competidor" id="validationCustom01"  pattern="^[a-zA-Z]{3}[0-9]{7}$" value="" maxlength="10" required>
     <div class="valid-feedback">
       Correcto!
     </div>
@@ -93,8 +93,8 @@
     <label for="validationCustom08" class="form-label">Genero</label>
     <select class="form-select form-competidor" id="validationCustom08" required>
       <option selected disabled value="">Seleccionar Genero</option>
-      <option value="1"> Femenino </option>
-      <option value="2"> Masculino </option>
+      <option value="Femenino"> Femenino </option>
+      <option value="Masculino"> Masculino </option>
     </select>
     <div class="valid-feedback">
       Correcto!
@@ -151,6 +151,7 @@
 
       console.log(datos);
       // Creamos el obj. Los datos son recuperados en orden
+
       let objCompetidor = new Competidor(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7], datos[8], datos[9])
       // Mostramos sus datos en un div
       document.getElementById('resultado').innerHTML = objCompetidor.getPerfil();
