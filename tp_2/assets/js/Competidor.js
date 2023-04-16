@@ -36,7 +36,46 @@ class Competidor {
      * @returns {string}
      */
     getPerfil(){
-        return `
+
+
+    return `
+    
+
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">
+             
+           <strong> GAL:  </strong> ${this.GAL}<br>
+           <strong> Apellido: </strong> ${this.apellido}<br>
+           <strong> Nombre: </strong> ${this.nombre}<br>
+           <strong> DU: </strong> ${this.DU}<br>
+           <strong> Fecha de nacimiento: </strong>  ${this.fechaNac}<br>
+           <strong> País de Origen: </strong> ${this.paisOrigen}<br>
+           <strong> Graduación: </strong> ${this.graduacion}<br>
+           <strong> Clasificación General: </strong/> ${this.clasificacionGen}<br>
+           <strong> E-mail: </strong> ${this.email}<br>
+           <strong> Género: </strong> ${this.genero}
+              
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+
+    ` 
+
+
+
+
+
+
+
+
+    /*     return `
         GAL: ${this.GAL}<br>
         Apellido: ${this.apellido}<br>
         Nombre: ${this.nombre}<br>
@@ -48,5 +87,9 @@ class Competidor {
         E-mail: ${this.email}<br>
         Género: ${this.genero}
         `;
+
+ */
+
+
     }
 }

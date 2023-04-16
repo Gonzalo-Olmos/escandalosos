@@ -126,7 +126,7 @@
   </form>
 
   <div class="row">
-    <div class="col-12 mt-5" id="resultado"></div>
+    <div class="col-3 mx-auto" id="resultado"></div>
   </div>
 </div>
 <script>
