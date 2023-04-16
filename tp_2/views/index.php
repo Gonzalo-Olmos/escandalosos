@@ -1,3 +1,11 @@
-<?php include_once("common/header.php");?>
+<?php include_once("common/header.php"); ?>
 
-<?php include_once("common/footer.php");?>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 col-md-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione modi delectus impedit magnam, illum sint accusamus perferendis fugit reiciendis ad dolores ipsum soluta maxime facere voluptatum? Sapiente pariatur iste aliquam eligendi quo ex fugiat dolorem reprehenderit. Eveniet, provident atque molestias eius ratione dicta autem illo necessitatibus aliquam asperiores adipisci soluta voluptate dolore at accusantium quod quam explicabo sunt ipsum culpa! A consequuntur perferendis ab veniam excepturi tenetur ducimus dolores nemo tempora, quis similique iusto veritatis sed animi aut consequatur provident ex necessitatibus quo ea, maiores, incidunt in facere. Voluptates ab voluptatibus non minus eos quis quas modi nemo dolor mollitia?</div>
+        <div class="col-12 col-md-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ipsa amet deserunt vitae sit, explicabo distinctio iure expedita doloremque vero qui dolorem? Maiores, porro deserunt alias eaque ex iure rem neque fugit tempora, odio aliquid! Numquam dignissimos porro laboriosam neque minus praesentium at quae maxime quibusdam eius aspernatur commodi nostrum asperiores exercitationem, molestiae quas expedita iure. Quos unde tempore magnam vitae omnis totam corrupti, nulla aperiam. Inventore repellendus sit aperiam id? Iure dignissimos molestiae consequuntur animi voluptatum sint at modi tempora libero, eos dolorem repudiandae iste deserunt perspiciatis! Id mollitia ducimus hic nobis inventore qui veritatis odit illo doloremque quaerat?</div>
+        <div class="col-12 col-md-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore at autem officia vel eveniet? Aut laudantium facere praesentium reiciendis placeat, ut nisi repudiandae veniam dolorum eum eveniet impedit hic nulla doloribus accusantium, molestias consequatur temporibus ratione sint rerum laborum fuga! Consequuntur deserunt placeat sapiente laborum recusandae nisi quam eum ratione architecto quae odio rerum, deleniti ex quis illo perferendis sit iusto! Labore hic iste voluptatibus quos incidunt qui ab neque reiciendis odit, dolore ipsa facilis quidem deleniti eveniet quod veniam sed eaque porro fuga repellat dolores! Ex asperiores aspernatur unde sequi veniam ducimus rem eius tenetur, corrupti harum, omnis consectetur!</div>
+    </div>
+</div>
+
+<?php include_once("common/footer.php"); ?>
