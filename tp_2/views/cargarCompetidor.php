@@ -48,7 +48,7 @@
 
   <div class="col-md-4">
     <label for="validationCustom10" class="form-label">Fecha de nacimiento</label>
-    <input type="date" class="form-control form-competidor" id="validationCustom10" value="" required>
+    <input type="date" class="form-control form-competidor" id="validationCustom10" value="" min="1953-01-01" max="<?php echo date('Y-m-d',strtotime('- 6 year'.date('Y-m-d'))); ?>" required>
     <div class="valid-feedback">
       Correcto!
     </div>
@@ -154,6 +154,10 @@
 
       console.log(datos);
       // Creamos el obj. Los datos son recuperados en orden
+
+      // Cambiamos formato de fecha
+      let fecha = datos[4].split('-');
+      datos[4] = fecha[2]+"/"+fecha[1]+"/"+fecha[0];
 
       let objCompetidor = new Competidor(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7], datos[8], datos[9])
       // Mostramos sus datos en un div
