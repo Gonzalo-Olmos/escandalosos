@@ -17,8 +17,9 @@
 
     </div>
 </div>
-
-
+<div class="row justify-content-center">
+    <img class="img-responsive w-50" src="https://thumbs.gfycat.com/DirectConfusedGuineafowl-size_restricted.gif" alt="">
+</div>
 <script>
     const competidor_1 = {
         GAL: "ABC1234567",
