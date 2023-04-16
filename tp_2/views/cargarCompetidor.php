@@ -155,6 +155,10 @@
       console.log(datos);
       // Creamos el obj. Los datos son recuperados en orden
 
+      // Cambiamos formato de fecha
+      let fecha = datos[4].split('-');
+      datos[4] = fecha[2]+"/"+fecha[1]+"/"+fecha[0];
+
       let objCompetidor = new Competidor(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7], datos[8], datos[9])
       // Mostramos sus datos en un div
       document.getElementById('resultado').innerHTML = objCompetidor.getPerfil();
