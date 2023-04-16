@@ -6,7 +6,7 @@
                     <use xlink:href="#bootstrap"></use>
                 </svg>
             </a>
-            <span class="mb-3 mb-md-0 text-muted">© 2023 Grupo 6 | Gonzalo Olmos | Gustavo Oliveros | Micaela Aluhe Paillamilla Martinez</span>
+            <span class="mb-3 mb-md-0 text-muted">© 2023 Grupo 6 | Escandalosos | Gonzalo Olmos | Gustavo Oliveros | Micaela Aluhe Paillamilla Martinez</span>
         </div>
         <ul class="nav col-md-4 justify-content-center list-unstyled d-flex">
             <li class="ms-3"><a class="text-muted" href="#"><i class="fab fa-facebook"></i></a></li>
