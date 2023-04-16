@@ -48,7 +48,7 @@
 
   <div class="col-md-4">
     <label for="validationCustom10" class="form-label">Fecha de nacimiento</label>
-    <input type="date" class="form-control form-competidor" id="validationCustom10" value="" required>
+    <input type="date" class="form-control form-competidor" id="validationCustom10" value="" min="1953-01-01" max="<?php echo date('Y-m-d',strtotime('- 6 year'.date('Y-m-d'))); ?>" required>
     <div class="valid-feedback">
       Correcto!
     </div>
