@@ -67,30 +67,7 @@ class Competidor {
             </div>
           </div>
 
-    ` 
-
-
-
-
-
-
-
-
-    /*     return `
-        GAL: ${this.GAL}<br>
-        Apellido: ${this.apellido}<br>
-        Nombre: ${this.nombre}<br>
-        DU: ${this.DU}<br>
-        Fecha de nacimiento: ${this.fechaNac}<br>
-        País de Origen: ${this.paisOrigen}<br>
-        Graduación: ${this.graduacion}<br>
-        Clasificación General: ${this.clasificacionGen}<br>
-        E-mail: ${this.email}<br>
-        Género: ${this.genero}
-        `;
-
- */
-
+    ` ;
 
     }
 }
