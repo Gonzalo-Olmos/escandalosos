@@ -1,6 +1,6 @@
 <?php include_once("common/header.php"); ?>
 
-<div class="row" style="margin-top:100px;margin-bottom:100px">
+<div class="row mx-md-5 mx-auto" style="margin-top:100px;margin-bottom:200px">
   <form class="row g-3" id="competidorForm" novalidate>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">Legajo</label>
@@ -121,7 +121,7 @@
   
 
     <div class="col-12">
-      <button class="btn btn-primary" type="submit">Submit form</button>
+      <input type="submit" class="btn btn-primary">
     </div>
   </form>
 
