@@ -15,10 +15,10 @@ class Competidor {
 		this.genero = genero;
 	}
 
-    /**
-     * Retorna los países aceptados
-     * @returns Object 
-     */
+  /**
+   * Retorna los países aceptados
+   * @returns Object 
+   */
 	static paisesAceptados() {
 		const PAISES = {
             Paises:
@@ -28,45 +28,41 @@ class Competidor {
             "Venezuela", "Colombia", "Paraguay", "Uruguay"]
 		};
 
-        return PAISES;
+    return PAISES;
 	}
 
-    /**
-     * Retorna el perfil del competidor
-     * @returns {string}
-     */
-    getPerfil(){
+  /**
+   * Retorna el perfil del competidor
+   * @returns {string}
+   */
+  getPerfil(){
 
-
-    return `
-    
-
-          <div class="card shadow-sm">
+  return `
+        <div class="card shadow-sm">
+          
+          <img src="../assets/img/logo_poomsae1.png" class=" card-img-top">
+          <div class="card-body">
+            <p class="card-text">
             
-            <img src="../assets/img/logo_poomsae1.png" class=" card-img-top">
-            <div class="card-body">
-              <p class="card-text">
-             
-           <strong> GAL:  </strong> ${this.GAL}<br>
-           <strong> Apellido: </strong> ${this.apellido}<br>
-           <strong> Nombre: </strong> ${this.nombre}<br>
-           <strong> DU: </strong> ${this.DU}<br>
-           <strong> Fecha de nacimiento: </strong>  ${this.fechaNac}<br>
-           <strong> País de Origen: </strong> ${this.paisOrigen}<br>
-           <strong> Graduación: </strong> ${this.graduacion}<br>
-           <strong> Clasificación General: </strong/> ${this.clasificacionGen}<br>
-           <strong> E-mail: </strong> ${this.email}<br>
-           <strong> Género: </strong> ${this.genero}
-              
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                </div>
-                <small class="text-body-secondary">Imaginación</small>
+          <strong> GAL:  </strong> ${this.GAL}<br>
+          <strong> Apellido: </strong> ${this.apellido}<br>
+          <strong> Nombre: </strong> ${this.nombre}<br>
+          <strong> DU: </strong> ${this.DU}<br>
+          <strong> Fecha de nacimiento: </strong>  ${this.fechaNac}<br>
+          <strong> País de Origen: </strong> ${this.paisOrigen}<br>
+          <strong> Graduación: </strong> ${this.graduacion}<br>
+          <strong> Clasificación General: </strong/> ${this.clasificacionGen}<br>
+          <strong> E-mail: </strong> ${this.email}<br>
+          <strong> Género: </strong> ${this.genero}
+            
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
               </div>
+              <small class="text-body-secondary">Imaginación</small>
             </div>
           </div>
-
+        </div>
     ` ;
 
     }

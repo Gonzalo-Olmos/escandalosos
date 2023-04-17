@@ -17,9 +17,9 @@
 
     </div>
 </div>
-<div class="row justify-content-center">
+<!-- <div class="row justify-content-center">
     <img class="img-responsive w-50" src="https://thumbs.gfycat.com/DirectConfusedGuineafowl-size_restricted.gif" alt="">
-</div>
+</div> -->
 <script>
     const competidor_1 = {
         GAL: "ABC1234567",
@@ -50,7 +50,7 @@
 
 
     const competidor_3 = {
-        GAL: "ABC1456723",
+        GAL: "ABC1456342",
         apellido: "Monica",
         nombre: "Lobos",
         DU: "Momtong makki",

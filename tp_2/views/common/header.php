@@ -19,7 +19,7 @@
     <header>
             <nav class="fixed-top navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
                 <div class="container-fluid">
-                    <img  class="navbar-brand" width="100"  src="http://localhost/PWA/pwafi/tpos/tp_1_ejercicio_11/assets/img/logo_poomsae1.png" alt="">
+                    <img  class="navbar-brand" width="100"  src="http://localhost/PWA\escandalosos\tp_2\assets\img\logo_poomsae1.png" alt="logo">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -27,7 +27,7 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div class="navbar-nav">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Inicio</a>
                             <a class="nav-link" href="#"></a>
                             <a class="nav-link" href="#"></a>
                         </div>
