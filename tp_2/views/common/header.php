@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="http:/localhost/pwa/escandalosos/TP_2/assets/css/estilos.css">
     <script src="http://localhost/pwa/escandalosos/TP_2/assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
     <script src="http://localhost/pwa/escandalosos/TP_2/assets/js/competidor.js"></script>
-    <script src="http://localhost/pwa/escandalosos/TP_2/assets/js/main.js"></script>
 
     <link rel="icon" href="http://localhost/PWA/pwafi/TP1/assets/img/fabiconProyec.svg">
 </head> 
