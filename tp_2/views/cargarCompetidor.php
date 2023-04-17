@@ -9,7 +9,7 @@
       Correcto!
     </div>
     <div class="invalid-feedback">
-      Debe ingresar un legajo valido (Ejemplo: AAA1234567).
+      Debe ingresar un GAL valido (Ejemplo: AAA1234567).
     </div>
   </div> 
   <div class="col-md-4">
