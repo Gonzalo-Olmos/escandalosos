@@ -17,9 +17,7 @@
 
     </div>
 </div>
-<!-- <div class="row justify-content-center">
-    <img class="img-responsive w-50" src="https://thumbs.gfycat.com/DirectConfusedGuineafowl-size_restricted.gif" alt="">
-</div> -->
-<script src="../assets/js/index.js"></script>
+
+<script type="module" src="../assets/js/arreglo_competidores.js"></script>
 
 <?php include_once("common/footer.php"); ?>
