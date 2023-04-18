@@ -1,3 +1,4 @@
+
 const competidor_1 = {
     GAL: "ABC1234567",
     apellido: "Ramirez",
@@ -43,7 +44,7 @@ let objCompetidor_1 = new Competidor(competidor_1['GAL'], competidor_1['apellido
 let objCompetidor_2 = new Competidor(competidor_2['GAL'], competidor_2['apellido'], competidor_2['nombre'], competidor_2['DU'], competidor_2['fechaNac'], competidor_2['paisOrigen'], competidor_2['graduacion'], competidor_2['clasificacionGen'], competidor_2['email'], competidor_2['genero'])
 let objCompetidor_3 = new Competidor(competidor_3['GAL'], competidor_3['apellido'], competidor_3['nombre'], competidor_3['DU'], competidor_3['fechaNac'], competidor_3['paisOrigen'], competidor_3['graduacion'], competidor_3['clasificacionGen'], competidor_3['email'], competidor_3['genero'])
 
-export let arreglo_competidores = [
+let arreglo_competidores = [
     objCompetidor_1,
     objCompetidor_2,
     objCompetidor_3
