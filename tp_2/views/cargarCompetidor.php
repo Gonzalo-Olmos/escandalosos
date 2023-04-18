@@ -148,7 +148,5 @@
     <div class="col-12 col-lg-6 col-xl-3 mx-auto mt-4" id="resultado"></div>
   </div>
 </div>
-<script src="../assets/js/cargarCompetidor.js"></script>
-<script src="../assets/js/paisesAceptados.js"></script>
 
 <?php include_once("common/footer.php"); ?>

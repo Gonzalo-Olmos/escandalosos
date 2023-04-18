@@ -1,4 +1,4 @@
-class Competidor {
+export class Competidor {
     
 	constructor(
 		GAL,apellido,nombre,DU,fechaNac,paisOrigen,

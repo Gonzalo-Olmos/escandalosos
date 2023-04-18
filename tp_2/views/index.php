@@ -18,6 +18,4 @@
     </div>
 </div>
 
-<script src="../assets/js/arreglo_competidores.js"></script>
-
 <?php include_once("common/footer.php"); ?>

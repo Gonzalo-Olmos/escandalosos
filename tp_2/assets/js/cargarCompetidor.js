@@ -1,3 +1,8 @@
+
+import {Competidor} from './Competidor.js';
+
+export function validar_formulario(){
+    
 const form = document.getElementById('competidorForm')
 
 form.addEventListener('submit', (event) => {
@@ -31,4 +36,5 @@ if(form.checkValidity()){
     // Mostramos sus datos en un div
     document.getElementById('resultado').innerHTML = objCompetidor.getPerfil();
 }
-})
+});
+}
