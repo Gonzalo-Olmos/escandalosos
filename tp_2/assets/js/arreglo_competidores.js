@@ -1,4 +1,4 @@
-import {Competidor} from './competidor.js';
+import {Competidor} from './Competidor.js';
 
 const COMPETIDORES = [
     {
