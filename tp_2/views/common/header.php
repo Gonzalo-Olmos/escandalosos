@@ -9,11 +9,7 @@
     <link href="http://localhost/PWA/PUBLICO/escandalosos/tp_2/assets/themes/bootstrap-5.2.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="">
     <link rel="stylesheet" href="http://localhost/PWA/PUBLICO/escandalosos/tp_2/assets/css/estilos.css">
     <script src="http://localhost/PWA/PUBLICO/escandalosos/tp_2/assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
-    
-    <script src="http://localhost/PWA/PUBLICO/escandalosos/tp_2/assets/js/competidor.js"></script>
-    <script src="http://localhost/PWA/PUBLICO/escandalosos/tp_2/assets/js/main.js"></script>
-
-    <script  src="http://localhost/PWA/PUBLICO/escandalosos/tp_2/assets/js/index_dom.js"></script>
+    <script type="module" src="http://localhost/PWA/PUBLICO/escandalosos/tp_2/assets/js/index_dom.js"></script>
     <link rel="icon" href="http://localhost/PWA/pwafi/TP1/assets/img/fabiconProyec.svg">
 </head>
 <body>
