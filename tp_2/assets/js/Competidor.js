@@ -1,8 +1,16 @@
 export class Competidor {
-    
 	constructor(
-		GAL,apellido,nombre,DU,fechaNac,paisOrigen,
-        graduacion,clasificacionGen,email,genero) {
+		GAL,
+		apellido,
+		nombre,
+		DU,
+		fechaNac,
+		paisOrigen,
+		graduacion,
+		clasificacionGen,
+		email,
+		genero
+	) {
 		this.GAL = GAL;
 		this.apellido = apellido;
 		this.nombre = nombre;
@@ -15,29 +23,40 @@ export class Competidor {
 		this.genero = genero;
 	}
 
-  /**
-   * Retorna los países aceptados
-   * @returns Object 
-   */
+	/**
+	 * Retorna los países aceptados
+	 * @returns Object
+	 */
 	static paisesAceptados() {
 		const PAISES = {
-            Paises:
-            ["Rusia", "Ucrania", "Estados Unidos",
-            "Canadá", "Perú", "Chile", "Argentina",
-            "México", "Brasil", "Bolivia", "Ecuador",
-            "Venezuela", "Colombia", "Paraguay", "Uruguay"]
+			Paises: [
+				"Rusia",
+				"Ucrania",
+				"Estados Unidos",
+				"Canadá",
+				"Perú",
+				"Chile",
+				"Argentina",
+				"México",
+				"Brasil",
+				"Bolivia",
+				"Ecuador",
+				"Venezuela",
+				"Colombia",
+				"Paraguay",
+				"Uruguay",
+			],
 		};
 
-    return PAISES;
+		return PAISES;
 	}
 
-  /**
-   * Retorna el perfil del competidor
-   * @returns {string}
-   */
-  getPerfil(){
-
-  return `
+	/**
+	 * Retorna el perfil del competidor
+	 * @returns {string}
+	 */
+	getPerfil() {
+		return `
         <div class="card shadow-sm">
           
           <img src="../assets/img/logo_poomsae1.png" class=" card-img-top">
@@ -48,10 +67,12 @@ export class Competidor {
           <strong> Apellido: </strong> ${this.apellido}<br>
           <strong> Nombre: </strong> ${this.nombre}<br>
           <strong> DU: </strong> ${this.DU}<br>
-          <strong> Fecha de nacimiento: </strong>  ${this.fechaNac}<br>
+          <strong> Fecha de nacimiento: </strong>${this.fechaNac}<br>
           <strong> País de Origen: </strong> ${this.paisOrigen}<br>
           <strong> Graduación: </strong> ${this.graduacion}<br>
-          <strong> Clasificación General: </strong/> ${this.clasificacionGen}<br>
+          <strong> Clasificación General: </strong/> ${
+						this.clasificacionGen
+					}<br>
           <strong> E-mail: </strong> ${this.email}<br>
           <strong> Género: </strong> ${this.genero}
             
@@ -63,7 +84,26 @@ export class Competidor {
             </div>
           </div>
         </div>
-    ` ;
+    `;
+	}
 
-    }
+	/**
+	 * Retorna los datos en un arreglo
+	 * @returns {Array}
+	 */
+	getDatos() {
+		let resultado = {
+			GAL: this.GAL,
+			apellido: this.apellido,
+			nombre: this.nombre,
+			DU: this.DU,
+			fechaNac: this.fechaNac,
+			paisOrigen: this.paisOrigen,
+			graduacion: this.graduacion,
+			clasificacionGen: this.clasificacionGen,
+			email: this.email,
+			genero: this.genero,
+		};
+		return resultado;
+	}
 }

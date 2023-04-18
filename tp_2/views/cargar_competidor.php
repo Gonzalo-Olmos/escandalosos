@@ -103,8 +103,8 @@
   </div>
 
   <div class="col-md-4">
-    <label for="validationCustom06" class="form-label">Clasificación General Nacimiento</label>
-    <input type="number" class="form-control form-competidor" id="validationCustom06" min="0" max="900" value="" required>
+    <label for="validationCustom06" class="form-label">Clasificación General</label>
+    <input type="number" class="form-control form-competidor" id="validationCustom06" min="0" max="900" step="0.01" value="" required>
     <div class="valid-feedback">
       Correcto!
     </div>
@@ -115,7 +115,7 @@
 
   <div class="col-md-4">
     <label for="validationCustom07" class="form-label">Email</label>
-    <input type="email" class="form-control form-competidor" id="validationCustom07" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="" required>
+    <input type="text" class="form-control form-competidor" id="validationCustom07" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="" required>
     <div class="valid-feedback">
       Correcto!
     </div>

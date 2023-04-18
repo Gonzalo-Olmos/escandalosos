@@ -1,22 +1,26 @@
-import {Competidor} from './Competidor.js';
-import {arreglo_competidores} from './arreglo_competidores.js';
-import {PAISESACEPTADOS} from './paisesAceptados.js';
-import {validar_formulario} from './cargarCompetidor.js';
+import {Competidor} from './competidor.js';
+import {arregloCompetidores} from './arreglo_competidores.js';
+import {PAISESACEPTADOS} from './paises_aceptados.js';
+import {validarFormulario} from './cargar_competidor.js';
 
-const SELECTPAISES = document.getElementById('paisOrigen');
+// Index
 
-for (let i = 0; i < arreglo_competidores.length; i++) {
-
+for (let i = 0; i < arregloCompetidores.length; i++) {
     if (document.getElementById('competidores_' + i) !== null) {
-    document.getElementById('competidores_' + i).innerHTML = arreglo_competidores[i].getPerfil();
-
+        document.getElementById('competidores_' + i).innerHTML = arregloCompetidores[i].getPerfil();
     }
 }
 
+// Cargar
+
 // Recorrido del JSON/arreglo
 PAISESACEPTADOS.Paises.forEach((pais) => {
-    // Colocar las opciones
-    SELECTPAISES.innerHTML += `<option value="${pais}">${pais}</option>`;
+    if(document.getElementById('paisOrigen') !==  null){
+        // Colocar las opciones
+        document.getElementById('paisOrigen').innerHTML += `<option value="${pais}">${pais}</option>`;
+    }
 });
 
-validar_formulario();
+if(document.getElementById('competidorForm') !==  null){
+    validarFormulario();
+}
