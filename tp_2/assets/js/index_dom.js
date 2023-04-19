@@ -3,13 +3,18 @@ import {arregloCompetidores} from './arreglo_competidores.js';
 import {PAISESACEPTADOS} from './paises_aceptados.js';
 import {validarFormulario} from './cargar_competidor.js';
 
+// Variables
+let tarjetas = "";
+
 // Index
 
 for (let i = 0; i < arregloCompetidores.length; i++) {
-    if (document.getElementById('competidores_' + i) !== null) {
-        document.getElementById('competidores_' + i).innerHTML = arregloCompetidores[i].getPerfil();
-    }
+    tarjetas += arregloCompetidores[i].getPerfil();
 }
+if(document.getElementById('competidores') !==  null){
+    document.getElementById('competidores').innerHTML = tarjetas;
+}
+
 
 // Cargar
 

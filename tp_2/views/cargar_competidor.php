@@ -36,13 +36,13 @@
  
   
   <div class="col-md-4">
-    <label for="validationCustom10" class="form-label">DU</label>
-    <input type="text" class="form-control form-competidor" id="validationCustom10" value="" required>
+    <label for="validationCustom10" class="form-label">DU (Documento Único)</label>
+    <input type="text" class="form-control form-competidor" id="validationCustom10" value="" pattern="^[\d]{1,3}[\d]{3,3}[\d]{3,3}$" required>
     <div class="valid-feedback">
       Correcto!
     </div>
     <div class="invalid-feedback">
-      Debe ingresar un DU valido.
+      Debe ingresar un número de documento único válido.
     </div>
   </div>
 
@@ -144,8 +144,8 @@
     </div>
   </form>
 
-  <div class="row">
-    <div class="col-12 col-lg-6 col-xl-3 mx-auto mt-4" id="resultado"></div>
+  <div class="row justify-content-center">
+    <div class="mt-4" id="resultado"></div>
   </div>
 </div>
 
