@@ -49,5 +49,7 @@ $(document).on("click", ".open-AddBookDialog_seccion_imagenes", function () {
                 $( "#modal_informacion_imagen .informacion_de_imagen").append( data );     
         }
     });
-  
+
+    $( "#modal_informacion_imagen .informacion_de_imagen").append( "NO ANDA LA URL DEL AJAX CONIO" );     
+    $('#modal_informacion_imagen').modal('show');	
 });
