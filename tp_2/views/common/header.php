@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/84a9afed55.js" crossorigin="anonymous"></script>
     <link href="../assets/themes/bootstrap-5.2.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="">
     <link rel="stylesheet" href="../assets/css/estilos.css">
+    <script src="../assets/themes/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
     <script src="../assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
     <link rel="icon" href="../assets/img/fabiconProyec.svg">
 </head>
