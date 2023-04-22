@@ -59,9 +59,9 @@
 
   <div class="col-md-4">
     <label for="paisOrigen" class="form-label">Pais de Origen</label>
-    <select class="form-select form-competidor" id="paisOrigen" required>
-      <option selected disabled value="">Seleccionar Pais de Origen</option>
-    </select>
+    <input type='text' class="form-control tt-input" name="pais" id="pais"
+    placeholder='pais'>
+    <input type='hidden' name="id_pais" id="id_pais">
     <div class="valid-feedback">
       Correcto!
     </div>

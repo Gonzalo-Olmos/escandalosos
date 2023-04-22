@@ -9,6 +9,9 @@
     <link href="../assets/themes/bootstrap-5.2.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="">
     <link rel="stylesheet" href="../assets/css/estilos.css">
     <script src="../assets/themes/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
     <script src="../assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
     <link rel="icon" href="../assets/img/fabiconProyec.svg">
 </head>

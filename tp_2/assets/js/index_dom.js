@@ -29,3 +29,38 @@ PAISESACEPTADOS.Paises.forEach((pais) => {
 if(document.getElementById('competidorForm') !==  null){
     validarFormulario();
 }
+
+$(document).ready(function() { 
+    $('#pais').autocomplete({					    
+        source: function(request, response){
+            var url = "../views/actions/autocomplet_paises.php";
+            $.post(url, {data:request.term}, function(data){
+                response($.map(data, function(paises) {
+                    return {	
+                        value:paises.id,              
+                        label:paises.nombrepais,
+                        id_pais: paises.id,	
+                        descripcion: paises.nombrepais,							           
+                    };
+                }));
+            }, "json");  
+        },
+        minLength: 2,
+        autofocus: true,
+        delay: 500,		        
+        select: function (event, ui) {	
+            $('#id_pais').val(ui.item.id_pais);
+            $('#pais').val(ui.item.descripcion);
+        },
+        change: function( event, ui ) {
+            if(ui.item==null){
+                limpiar_datos_paises();
+            }
+        }		       
+    });
+});
+
+function limpiar_datos_paises(){
+    $('#id_pais').val("");
+    $('#nombre_pais').val("");
+}
