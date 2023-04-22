@@ -14,21 +14,20 @@ export const validarFormulario = () => {
 
         // Si está validado, creamos objeto y mostramos
         if(form.checkValidity()){
-            // Asumimos que tenemos todo.
-            // Obtenemos los inputs
-            document.querySelectorAll('.form-competidor').forEach((input) => {
-                // Recorremos los inputs y pusheamos los datos en un arreglo
-                datos.push(input.value);
+            $.ajax({
+                url: "actions/registrar_competidor.php",
+                type: "POST",
+                data: $("#competidorForm").serialize(),
+                // beforeSend: function() {
+                //     $("#btn-submit").html('<span class="spinner-border spinner-border-sm mx-2" role="status" aria-hidden="true"></span>Cargando...');
+                // },
+                // complete: function() {
+                //     $("#btn-submit").html("Reintentar")
+                // },
+                success: function(result) {
+                    console.log(result);
+                },
             });
-
-            // Cambiamos formato de fecha
-            let fecha = datos[4].split('-');
-            datos[4] = fecha[2]+"/"+fecha[1]+"/"+fecha[0];
-
-            // Creamos el obj. Los datos son recuperados en orden
-            objCompetidor = new Competidor(datos[0], datos[1], datos[2], datos[3], datos[4], datos[5], datos[6], datos[7], datos[8], datos[9])
-            // Mostramos sus datos en un div
-            document.getElementById('resultado').innerHTML = objCompetidor.getPerfil();
         }
     });
 }

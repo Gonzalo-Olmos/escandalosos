@@ -221,18 +221,6 @@ class Competidor
     public function insertar()
     {
 
- /*        private $gal;
-        private $apellido;
-        private $nombre;
-        private $du;
-        private $fechaNacimiento;
-        private $idpais;
-        private $graduacion;
-        private $clasificacionGeneral;
-        private $email;
-        private $genero;
- */
-
         $base = new BaseDatos();
         $resp = false;
         //Asigno los datos a variables
@@ -260,7 +248,7 @@ class Competidor
         }
         return $resp;
     }
-
+    
     //MODIFICAR
     public function modificar()
     {
