@@ -35,14 +35,15 @@ $(document).ready(function() {
         source: function(request, response){
             var url = "../views/actions/autocomplet_paises.php";
             $.post(url, {data:request.term}, function(data){
-                response($.map(data, function(paises) {
+                response($.map(data, function(p) {
                     return {	
-                        value:paises.id,              
-                        label:paises.nombrepais,
-                        id_pais: paises.id,	
-                        descripcion: paises.nombrepais,							           
+                        value:data['id'],              
+                        label:data['nombrepais'],
+                        id_pais: data['id'],
+                        descripcion: data['nombrepais'],						           
                     };
                 }));
+                
             }, "json");  
         },
         minLength: 2,

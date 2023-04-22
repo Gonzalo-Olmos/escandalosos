@@ -1,8 +1,10 @@
 <?php
-include_once("../../controllers/pais.php");
+include("../../models/Pais.php");
 
 if(!empty($_POST)){
-    $objPais = new pais_controller();
+    $objPais = new Pais();
 
-    $objPais->autocomplete_pais($_POST['data']);    
+    $pais = $objPais->obtener_pais_por_termino_autocompletado($_POST['data']);  
+    echo json_encode($pais);
+    exit;  
 }
