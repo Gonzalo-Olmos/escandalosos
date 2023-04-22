@@ -32,7 +32,7 @@ if(document.getElementById('competidorForm') !==  null){
 
 $(document).ready(function() {
     $(function() {
-      $( "#pais" ).autocomplete({
+      $( "#estado" ).autocomplete({
         source: function( request, response ) {
           $.ajax({
             type:"POST",
@@ -45,9 +45,9 @@ $(document).ready(function() {
                 response($.map(data, function(pais) {
                     return {	
                             value:pais.value,              
-                            label:pais.label,
-                            id_pais: pais.value,	
-                            descripcion: pais.label,							           
+                            label:pais.label+" | "+pais.estado,	
+                            id_estado: pais.value,	
+                            descripcion: pais.label+" | "+pais.estado,							           
                     };
                 }));
             }
@@ -55,8 +55,8 @@ $(document).ready(function() {
         },
         select: function(event, ui) {
           // Asignar valor seleccionado al input.
-          $( "#pais" ).val(ui.item.descripcion);
-          $( "#id_pais" ).val(ui.item.id_pais);
+          $( "#estado" ).val(ui.item.descripcion);
+          $( "#id_estado" ).val(ui.item.id_estado);
           return false;
         },
         change: function( event, ui ) {

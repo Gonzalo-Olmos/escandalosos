@@ -54,9 +54,10 @@ class Pais
 
     //Funciones BD
     public function obtener_pais_por_termino_autocompletado($termino){
-        $query="SELECT *
-        FROM pais
-        WHERE  (paisnombre LIKE '%$termino%')";
+        $query="SELECT pais.id AS id_pais, pais.paisnombre, estado.estadonombre, estado.id AS id_estado
+            FROM estado
+            INNER JOIN pais ON pais.id = estado.ubicacionpaisid
+            WHERE  (estado.estadonombre LIKE '%$termino%')";
 
         $base = new BaseDatos();
         $rta = false;
@@ -65,8 +66,9 @@ class Pais
                 $array = array();
                 while ($row2 = $base->Registro()) {
                     $array[] = array(
-                        'value'=>$row2['id'],
-                        'label'=> $row2['paisnombre']
+                        'value'=>$row2['id_estado'],
+                        'label'=> $row2['paisnombre'],
+                        'estado' => $row2['estadonombre']
                     );
                 }
                 $rta = $array;

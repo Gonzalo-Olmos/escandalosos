@@ -59,9 +59,9 @@
 
   <div class="col-md-4">
     <label for="paisOrigen" class="form-label">Pais de Origen</label>
-    <input type='text' class="form-control tt-input" name="pais" id="pais"
-    placeholder='pais'>
-    <input type='hidden' name="id_pais" id="id_pais">
+    <input type='text' class="form-control tt-input" name="estado" id="estado"
+    placeholder='estado'>
+    <input type='hidden' name="id_estado" id="id_estado">
     <div class="valid-feedback">
       Correcto!
     </div>
