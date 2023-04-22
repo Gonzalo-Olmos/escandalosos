@@ -7,6 +7,11 @@
 </div>
 <div class="row mx-md-3 mx-auto" id="competidores" style="margin-bottom:200px">
 </div>
+
+<div class="row">
+    <?php include_once("./seccion_5_tabla_competidores.php"); ?>
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
