@@ -62,11 +62,14 @@ class Pais
         $rta = false;
         if ($base->Iniciar()) {
             if ($base->Ejecutar($query)) {
-                $row = $base->Registro();
-                $rta = array(
-                    'id'=>$row['id'],
-                    'paisnombre'=> $row['paisnombre']
-                );
+                $array = array();
+                while ($row2 = $base->Registro()) {
+                    $array[] = array(
+                        'value'=>$row2['id'],
+                        'label'=> $row2['paisnombre']
+                    );
+                }
+                $rta = $array;
 
             } else {
                 $this->setMensaje($base->getError());

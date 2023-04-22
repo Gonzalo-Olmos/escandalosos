@@ -30,36 +30,44 @@ if(document.getElementById('competidorForm') !==  null){
     validarFormulario();
 }
 
-$(document).ready(function() { 
-    $('#pais').autocomplete({					    
-        source: function(request, response){
-            var url = "../views/actions/autocomplet_paises.php";
-            $.post(url, {data:request.term}, function(data){
-                response($.map(data, function(p) {
+$(document).ready(function() {
+    $(function() {
+      $( "#pais" ).autocomplete({
+        source: function( request, response ) {
+          $.ajax({
+            type:"POST",
+            url: "../views/actions/autocomplet_paises.php",// Ruta al archivo JSON con datos.
+            dataType: "json",
+            data: {
+              term: request.term
+            },
+            success: function( data ) {
+                response($.map(data, function(pais) {
                     return {	
-                        value:data['id'],              
-                        label:data['nombrepais'],
-                        id_pais: data['id'],
-                        descripcion: data['nombrepais'],						           
+                            value:pais.value,              
+                            label:pais.label,
+                            id_pais: pais.value,	
+                            descripcion: pais.label,							           
                     };
                 }));
-                
-            }, "json");  
+            }
+          });
         },
-        minLength: 2,
-        autofocus: true,
-        delay: 500,		        
-        select: function (event, ui) {	
-            $('#id_pais').val(ui.item.id_pais);
-            $('#pais').val(ui.item.descripcion);
+        select: function(event, ui) {
+          // Asignar valor seleccionado al input.
+          $( "#pais" ).val(ui.item.descripcion);
+          $( "#id_pais" ).val(ui.item.id_pais);
+          return false;
         },
         change: function( event, ui ) {
             if(ui.item==null){
                 limpiar_datos_paises();
             }
-        }		       
+        },
+        minLength: 2 // Mínimo de caracteres a escribir para que aparezcan sugerencias.
+      });
     });
-});
+  });
 
 function limpiar_datos_paises(){
     $('#id_pais').val("");

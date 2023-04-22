@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0  maximum-scale=1.0, minimum-scale=1.0">
     <script src="https://kit.fontawesome.com/84a9afed55.js" crossorigin="anonymous"></script>
     <link href="../assets/themes/bootstrap-5.2.3/css/bootstrap.min.css" type="text/css" rel="stylesheet" media="">
-    <link rel="stylesheet" href="../assets/css/estilos.css">
-    <script src="../assets/themes/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/estilos.css"><script src="../assets/themes/jQuery-3.6.0/jquery-3.6.0.min.js"></script>
+    
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/start/jquery-ui.css" rel="stylesheet" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
     <link rel="icon" href="../assets/img/fabiconProyec.svg">
 </head>
