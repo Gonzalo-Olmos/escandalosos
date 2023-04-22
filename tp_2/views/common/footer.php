@@ -15,6 +15,7 @@
         </ul>
     </footer>
     <script type="module" src="../assets/js/index_dom.js"></script>
+    <script type="module" src="../assets/js/ajax.js"></script>
 </div>
 </div>
 </body>
