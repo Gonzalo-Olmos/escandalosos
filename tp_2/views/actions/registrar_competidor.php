@@ -11,7 +11,7 @@ if(!empty($_POST)){
      $_POST['clasificacionGral'], $_POST['email'], $_POST['genero']);
 
 
-     
+    $objCompetidor->insertar();
 
    
 }
