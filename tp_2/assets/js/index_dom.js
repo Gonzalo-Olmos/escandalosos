@@ -40,7 +40,7 @@ $(document).on("click", ".open-AddBookDialog_seccion_imagenes", function () {
  
     $.ajax({
         type: "POST",
-        url:  base_url +"/controllers/competidor/obtener_informacion_de_imagen/"+id_imagen,
+        url:  base_url +"/controllers/competidor.php?function=obtener_informacion_de_imagen/"+id_imagen,
         data: {	          		           
                },
         dataType: "json",
