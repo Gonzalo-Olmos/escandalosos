@@ -8,7 +8,7 @@ export var competidores_tabla = $('#competidores_tabla').DataTable( {
     },
     processing : true,
     responsive: true,
-    ordering:false,
+    ordering:true,
     "language": {
         "decimal": ",",
         "thousands": ".",
@@ -28,7 +28,6 @@ export var competidores_tabla = $('#competidores_tabla').DataTable( {
     },
     
     "lengthMenu": [[5,10,-1], [5, 10, "Todos"]],
-    dom: 'frtipB',
     buttons: [
             {
                 extend: 'pageLength',
@@ -45,15 +44,7 @@ export var competidores_tabla = $('#competidores_tabla').DataTable( {
     ],
     "columnDefs": [	 
         {   'targets': 0,
-            'checkboxes': {
-               'selectRow': true
-            }
         },           
-       
-        { type: 'date-uk', targets: [1] },
     ], 
-    "select": {
-        'style': 'multi'
-    }, 
     "order": [[ 0, "desc" ]]
 } );	
