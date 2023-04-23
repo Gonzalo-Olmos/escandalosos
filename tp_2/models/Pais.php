@@ -82,5 +82,36 @@ class Pais
         return $rta;
     }
 
+    public function obtener_pais_por_estado($id_estado){
+        $query="SELECT pais.id AS id_pais, pais.paisnombre, estado.estadonombre
+        FROM estado
+        INNER JOIN pais ON pais.id = estado.ubicacionpaisid
+        WHERE  estado.id = $id_estado";
+
+        $base = new BaseDatos();
+        $rta = false;
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($query)) {
+                $array = array();
+                while ($row2 = $base->Registro()) {
+                    $array[] = array(
+                        'id_pais'=>$row2['id_pais'],
+                        'paisnombre'=> $row2['paisnombre'],
+                        'estadonombre'=> $row2['estadonombre']
+                    );
+                }
+                $rta = $array;
+
+            } else {
+                $this->setMensaje($base->getError());
+            }
+    } else {
+        $this->setMensaje($base->getError());
+    }
+    return $rta;
+    }
+
+    
+
     
 }
