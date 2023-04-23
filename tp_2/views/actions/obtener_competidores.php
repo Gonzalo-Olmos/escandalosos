@@ -1,6 +1,6 @@
 <?php
 include_once("../../models/Competidor.php");
-
+include("../../models/Pais.php");
 $objCompetidor = new Competidor();
 
 $competidores = array();
