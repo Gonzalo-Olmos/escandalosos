@@ -1,6 +1,6 @@
 <?php include_once("common/header.php"); ?>
 
-<div class="row mx-md-3 mx-auto" id="competidores">
+<div class="row mx-md-3 mx-auto" id="competidores" style="margin-top: 100px;">
 </div>
 
 <div class="row mx-md-3">
