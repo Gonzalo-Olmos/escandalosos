@@ -14,7 +14,12 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
     <script src="../assets/themes/bootstrap-5.2.3/js/bootstrap.min.js"></script>
-    <link rel="icon" href="../assets/img/fabiconProyec.svg">
+
+    <link href="../assets/themes/datatables/datatables.min.css"
+    rel="stylesheet" type="text/css" />
+    <script src="../assets/themes/datatables/datatables.all.min.js"
+    type="text/javascript"></script>
+    
 </head>
 <body>
 <div class="container-fluid">  

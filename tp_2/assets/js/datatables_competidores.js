@@ -1,8 +1,8 @@
-$('#competidores').DataTable( {
+export var competidores_tabla = $('#competidores_tabla').DataTable( {
             
     ajax:  {	
         type: "POST",	
-        url:  "",
+        url:  "../views/actions/obtener_competidores.php",
         dataSrc: '',
         data: {},
     },

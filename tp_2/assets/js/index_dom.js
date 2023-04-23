@@ -2,6 +2,7 @@ import {Competidor} from './competidor.js';
 import {arregloCompetidores} from './arreglo_competidores.js';
 import {PAISESACEPTADOS} from './paises_aceptados.js';
 import {validarFormulario} from './cargar_competidor.js';
+import {competidores_tabla} from './datatables_competidores.js';
 
 // Variables
 let tarjetas = "";

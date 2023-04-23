@@ -40,6 +40,7 @@ class Competidor
         $this->setClasificacionGral($clasificacionGeneral);
         $this->setEmail($email);
         $this->setGenero($genero);
+        $this->setIdpais($idpais);
     
 
     }
@@ -203,9 +204,22 @@ class Competidor
             if ($base->Ejecutar($sql)) {
                 $array = array();
                 while ($row2 = $base->Registro()) {
-                    $objCompetidor = new competidor();
-                    $objCompetidor->buscar($row2['id']);
-                    $array[] = $objCompetidor;
+                  
+                    $dato = array (
+                        'id' => $row2['id'],
+                        'gal'=> $row2['gal'],
+                        'apellido'=> $row2['apellido'],
+                        'nombre' => $row2['nombre'],
+                        'du' =>  $row2['du'],
+                        'fechaNacimiento' => $row2['fechaNacimiento'],
+                        'idpais' => $row2['idpais'],
+                        'graduacion' => $row2['graduacion'],
+                        'clasificacionGeneral' => $row2['clasificacionGeneral'],
+                        'email' =>$row2['email'],
+                        'genero' => $row2['genero']
+                    );
+
+                    $array[] = $dato;
                 }
             } else {
                 $this->setMensaje($base->getError());

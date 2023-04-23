@@ -8,7 +8,8 @@
 <div class="row mx-md-3 mx-auto" id="competidores" style="margin-bottom:200px">
 </div>
 
-<div class="row">
+<div class="row mx-md-3">
+  <h1> Competidores </h1>
     <?php include_once("./seccion_5_tabla_competidores.php"); ?>
 </div>
 
