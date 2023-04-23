@@ -1,7 +1,5 @@
-<?php include_once("common/header.php"); ?>
 
-<div class="row mx-md-5 mx-auto" style="margin-top:100px;margin-bottom:200px">
-  <form action="" class="row g-3" id="competidorForm" novalidate>
+<form action="" class="row g-3" id="competidorForm" novalidate>
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">GAL (Global Athletic License)</label>
     <input name="gal" type="text" class="form-control form-competidor" id="validationCustom01"  pattern="^[a-zA-Z]{3}[0-9]{7}$" value="" maxlength="10" required>
@@ -147,6 +145,3 @@
   <div class="row justify-content-center">
     <div class="mt-4" id="resultado"></div>
   </div>
-</div>
-
-<?php include_once("common/footer.php"); ?>

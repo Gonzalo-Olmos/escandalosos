@@ -18,14 +18,8 @@ export const validarFormulario = () => {
                 url: "actions/registrar_competidor.php",
                 type: "POST",
                 data: $("#competidorForm").serialize(),
-                // beforeSend: function() {
-                //     $("#btn-submit").html('<span class="spinner-border spinner-border-sm mx-2" role="status" aria-hidden="true"></span>Cargando...');
-                // },
-                // complete: function() {
-                //     $("#btn-submit").html("Reintentar")
-                // },
                 success: function(result) {
-                    console.log(result);
+                    location.reload();
                 },
             });
         }
