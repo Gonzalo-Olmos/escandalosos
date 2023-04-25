@@ -54,10 +54,9 @@ class Pais
 
     //Funciones BD
     public function obtener_pais_por_termino_autocompletado($termino){
-        $query="SELECT pais.id AS id_pais, pais.paisnombre, estado.estadonombre, estado.id AS id_estado
-            FROM estado
-            INNER JOIN pais ON pais.id = estado.ubicacionpaisid
-            WHERE  (estado.estadonombre LIKE '%$termino%')";
+        $query="SELECT *
+            FROM pais
+            WHERE  ( paisnombre LIKE '%$termino%')";
 
         $base = new BaseDatos();
         $rta = false;
@@ -66,9 +65,8 @@ class Pais
                 $array = array();
                 while ($row2 = $base->Registro()) {
                     $array[] = array(
-                        'value'=>$row2['id_estado'],
-                        'label'=> $row2['paisnombre'],
-                        'estado' => $row2['estadonombre']
+                        'value'=>$row2['id'],
+                        'label'=> $row2['paisnombre']
                     );
                 }
                 $rta = $array;
@@ -82,11 +80,10 @@ class Pais
         return $rta;
     }
 
-    public function obtener_pais_por_estado($id_estado){
-        $query="SELECT pais.id AS id_pais, pais.paisnombre, estado.estadonombre
-        FROM estado
-        INNER JOIN pais ON pais.id = estado.ubicacionpaisid
-        WHERE  estado.id = $id_estado";
+    public function obtener_estado_por_termino_autocompletado($termino,$id_pais){
+        $query="SELECT *
+            FROM estado
+            WHERE  ( estadonombre LIKE '%$termino%') && ubicacionpaisid = $id_pais";
 
         $base = new BaseDatos();
         $rta = false;
@@ -95,9 +92,8 @@ class Pais
                 $array = array();
                 while ($row2 = $base->Registro()) {
                     $array[] = array(
-                        'id_pais'=>$row2['id_pais'],
-                        'paisnombre'=> $row2['paisnombre'],
-                        'estadonombre'=> $row2['estadonombre']
+                        'value'=>$row2['id'],
+                        'label'=> $row2['estadonombre']
                     );
                 }
                 $rta = $array;
@@ -105,13 +101,60 @@ class Pais
             } else {
                 $this->setMensaje($base->getError());
             }
-    } else {
-        $this->setMensaje($base->getError());
-    }
-    return $rta;
+        } else {
+            $this->setMensaje($base->getError());
+        }
+        return $rta;
     }
 
-    
+    public function buscar($id)
+    {
+        $base = new BaseDatos();
+        $resp = false;
+        $sql = "SELECT * FROM pais WHERE id = '" . $id . "'";
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($sql)) {
+                if ($row2 = $base->Registro()) {
+
+                    $dato = array (
+                        'id' =>$row2['id'],
+                        'paisnombre' => $row2['paisnombre']
+                    );
+
+                    $array[] = $dato;
+                }
+            } else {
+                $this->setMensaje($base->getError());
+            }
+        } else {
+            $this->setMensaje($base->getError());
+        }
+        return $array;
+    }
+
+    public function buscar_estado($id)
+    {
+        $base = new BaseDatos();
+        $resp = false;
+        $sql = "SELECT * FROM estado WHERE id = '" . $id . "'";
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($sql)) {
+                if ($row2 = $base->Registro()) {
+
+                    $dato = array (
+                        'id' =>$row2['id'],
+                        'estadonombre' => $row2['estadonombre']
+                    );
+
+                    $array[] = $dato;                }
+            } else {
+                $this->setMensaje($base->getError());
+            }
+        } else {
+            $this->setMensaje($base->getError());
+        }
+        return $array;
+    }
 
     
 }

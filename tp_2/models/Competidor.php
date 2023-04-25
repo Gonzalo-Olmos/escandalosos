@@ -9,6 +9,7 @@ class Competidor
     private $du;
     private $fechaNacimiento;
     private $idpais;
+    private $idestado;
     private $graduacion;
     private $clasificacionGeneral;
     private $email;
@@ -23,13 +24,14 @@ class Competidor
         $this->du = "";
         $this->fechaNacimiento = "";
         $this->idpais = "";
+        $this->idestado = "";
         $this->graduacion = "";
         $this->clasificacionGeneral = "";
         $this->email = "";
         $this->genero = "";
     }
 
-    public function cargar($gal, $apellido, $nombre, $du, $fechaNacimiento, $idpais, $graduacion, $clasificacionGeneral, $email, $genero,)
+    public function cargar($gal, $apellido, $nombre, $du, $fechaNacimiento, $idpais,$idestado, $graduacion, $clasificacionGeneral, $email, $genero,)
     {
         $this->setGal($gal);
         $this->setApellido($apellido);
@@ -41,6 +43,7 @@ class Competidor
         $this->setEmail($email);
         $this->setGenero($genero);
         $this->setIdpais($idpais);
+        $this->setIdestado($idestado);
     
 
     }
@@ -94,6 +97,14 @@ class Competidor
 
     public function setIdpais($idpais){
         $this->idpais = $idpais;
+    }
+
+    public function getIdestado(){
+        return $this->idestado;
+    }
+
+    public function setIdestado($idestado){
+        $this->idestado = $idestado;
     }
 
     public function getGraduacion(){
@@ -173,13 +184,23 @@ class Competidor
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 if ($row2 = $base->Registro()) {
-                    $this->setId($row2['id']);
 
-                    //Creo un objeto para buscar al id y setear el objeto
-                    $competidor = new Competidor();
-                    $competidor->buscar($row2['id']);
-                    $this->setId($competidor);
-                    
+                    $dato = array (
+                        'id' => $row2['id'],
+                        'gal'=> $row2['gal'],
+                        'apellido'=> $row2['apellido'],
+                        'nombre' => $row2['nombre'],
+                        'du' =>  $row2['du'],
+                        'fechaNacimiento' => $row2['fechaNacimiento'],
+                        'idpais' => $row2['idpais'],
+                        'idestado' => $row2['idestado'],
+                        'graduacion' => $row2['graduacion'],
+                        'clasificacionGeneral' => $row2['clasificacionGeneral'],
+                        'email' =>$row2['email'],
+                        'genero' => $row2['genero']
+                    );
+
+                    $array[] = $dato;
                     $resp = true;
                 }
             } else {
@@ -213,6 +234,7 @@ class Competidor
                         'du' =>  $row2['du'],
                         'fechaNacimiento' => $row2['fechaNacimiento'],
                         'idpais' => $row2['idpais'],
+                        'idestado' => $row2['idestado'],
                         'graduacion' => $row2['graduacion'],
                         'clasificacionGeneral' => $row2['clasificacionGeneral'],
                         'email' =>$row2['email'],
@@ -248,9 +270,11 @@ class Competidor
         $clasificacionGeneral = $this->getClasificacionGral();
         $email = $this->getEmail();
         $genero = $this->getGenero();
+        $idestado =   $this->getIdestado();
+         
 
         //Creo la consulta 
-        $sql = "INSERT INTO competidor (gal, apellido, nombre, du, fechaNacimiento, idpais, graduacion, clasificacionGeneral, email, genero) VALUES ('{$gal}', '{$apellido}', '{$nombre}', '{$du}', '{$fechaNacimiento}', '{$idpais}', '{$graduacion}', '{$clasificacionGeneral}', '{$email}', '{$genero}')";
+        $sql = "INSERT INTO competidor (gal, apellido, nombre, du, fechaNacimiento, idpais, idestado, graduacion, clasificacionGeneral, email, genero) VALUES ('{$gal}', '{$apellido}', '{$nombre}', '{$du}', '{$fechaNacimiento}', '{$idpais}','{$idestado}', '{$graduacion}', '{$clasificacionGeneral}', '{$email}', '{$genero}')";
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;

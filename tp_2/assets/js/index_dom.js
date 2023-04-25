@@ -33,7 +33,10 @@ if(document.getElementById('competidorForm') !==  null){
 
 $(document).ready(function() {
     $(function() {
-      $( "#estado" ).autocomplete({
+
+      $('#estado').prop('readonly', true);
+
+      $( "#pais" ).autocomplete({
         source: function( request, response ) {
           $.ajax({
             type:"POST",
@@ -46,9 +49,47 @@ $(document).ready(function() {
                 response($.map(data, function(pais) {
                     return {	
                             value:pais.value,              
-                            label:pais.label+" | "+pais.estado,	
-                            id_estado: pais.value,	
-                            descripcion: pais.label+" | "+pais.estado,							           
+                            label:pais.label,
+                            id_pais: pais.value,	
+                            descripcion: pais.label,						           
+                    };
+                }));
+            }
+          });
+        },
+        select: function(event, ui) {
+          // Asignar valor seleccionado al input.
+          $( "#pais" ).val(ui.item.descripcion);
+          $( "#id_pais" ).val(ui.item.id_pais);
+          $('#estado').prop('readonly', false);
+          return false;
+        },
+        change: function( event, ui ) {
+            if(ui.item==null){
+                limpiar_datos_paises();
+                $('#estado').prop('readonly', true);
+            }
+        },
+        minLength: 2 // Mínimo de caracteres a escribir para que aparezcan sugerencias.
+      });
+
+      $( "#estado" ).autocomplete({
+        source: function( request, response ) {
+          $.ajax({
+            type:"POST",
+            url: "../views/actions/autocomplet_estado.php",// Ruta al archivo JSON con datos.
+            dataType: "json",
+            data: {
+              id_pais: $('#id_pais').val(),
+              term: request.term
+            },
+            success: function( data ) {
+                response($.map(data, function(estado) {
+                    return {	
+                            value:estado.value,              
+                            label:estado.label,
+                            id_estado: estado.value,	
+                            descripcion: estado.label,						           
                     };
                 }));
             }
@@ -62,7 +103,7 @@ $(document).ready(function() {
         },
         change: function( event, ui ) {
             if(ui.item==null){
-                limpiar_datos_paises();
+                limpiar_datos_estado();
             }
         },
         minLength: 2 // Mínimo de caracteres a escribir para que aparezcan sugerencias.
@@ -72,7 +113,12 @@ $(document).ready(function() {
 
 function limpiar_datos_paises(){
     $('#id_pais').val("");
-    $('#nombre_pais').val("");
+    $('#pais').val("");
+}
+
+function limpiar_datos_estado(){
+  $('#id_estado').val("");
+  $('#estado').val("");
 }
 
 

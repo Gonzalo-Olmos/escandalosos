@@ -13,7 +13,8 @@ $acciones = array();
 
 foreach ($arreglo_competidores as $value) {
 
-    $pais = $objPais->obtener_pais_por_estado($value['idpais']);
+    $pais = $objPais->buscar($value['idpais']);
+    $estado = $objPais->buscar_estado($value['idestado']);
 
     $competidores[] = [
         $value['gal'],
@@ -21,7 +22,7 @@ foreach ($arreglo_competidores as $value) {
         $value['nombre'],
         $value['du'],
         date('d/m/Y', strtotime($value['fechaNacimiento'])),
-        $pais[0]['paisnombre'].' | '.$pais[0]['estadonombre'],
+        $pais[0]['paisnombre'].' | '.$estado[0]['estadonombre'],
         $value['graduacion'],
         $value['clasificacionGeneral'],
         $value['email'],

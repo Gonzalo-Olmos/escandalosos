@@ -1,0 +1,14 @@
+CREATE TABLE `competidor` (
+  `id` int(11) NOT NULL,
+  `gal` varchar(50) NOT NULL UNIQUE,
+  `apellido` varchar(100) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `du` int(9) NOT NULL UNIQUE,
+  `fechaNacimiento` date NOT NULL,
+  `idpais` int(11) NOT NULL,
+  `idestado` int(11) NOT NULL,
+  `graduacion` varchar(50) NOT NULL,
+  `clasificacionGeneral` decimal(10,2) NOT NULL,
+  `email` varchar(100) NOT NULL UNIQUE,
+  `genero` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

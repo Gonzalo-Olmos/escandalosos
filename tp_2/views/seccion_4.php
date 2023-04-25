@@ -55,16 +55,27 @@
     </div>
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-2">
     <label for="paisOrigen" class="form-label">Pais de Origen</label>
-    <input type='text' class="form-control tt-input" name="estado" id="estado"
-    placeholder='estado'>
-    <input type='hidden' name="id_estado" id="id_estado">
+    <input type='text' class="form-control form-competidor tt-input" name="pais" id="pais" required>
+    <input type='hidden' name="id_pais" id="id_pais">
     <div class="valid-feedback">
       Correcto!
     </div>
     <div class="invalid-feedback">
       Debe seleccionar un pais valido.
+    </div>
+  </div>
+
+  <div class="col-md-2">
+    <label for="paisOrigen" class="form-label">Provincia</label>
+    <input type='text' class="form-control form-competidor tt-input" name="estado" id="estado" required>
+    <input type='hidden' name="id_estado" id="id_estado">
+    <div class="valid-feedback">
+      Correcto!
+    </div>
+    <div class="invalid-feedback">
+      Debe seleccionar una provincia valida.
     </div>
   </div>
 
