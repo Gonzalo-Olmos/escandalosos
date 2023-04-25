@@ -16,17 +16,6 @@ if(document.getElementById('competidores') !==  null){
     document.getElementById('competidores').innerHTML = tarjetas;
 }
 
-
-// Cargar
-
-// Recorrido del JSON/arreglo
-PAISESACEPTADOS.Paises.forEach((pais) => {
-    if(document.getElementById('paisOrigen') !==  null){
-        // Colocar las opciones
-        document.getElementById('paisOrigen').innerHTML += `<option value="${pais}">${pais}</option>`;
-    }
-});
-
 if(document.getElementById('competidorForm') !==  null){
     validarFormulario();
 }
@@ -59,9 +48,16 @@ $(document).ready(function() {
         },
         select: function(event, ui) {
           // Asignar valor seleccionado al input.
-          $( "#pais" ).val(ui.item.descripcion);
-          $( "#id_pais" ).val(ui.item.id_pais);
-          $('#estado').prop('readonly', false);
+          if ($.inArray(ui.item.descripcion, PAISESACEPTADOS) !== -1) {
+
+            $( "#pais" ).val(ui.item.descripcion);
+            $( "#id_pais" ).val(ui.item.id_pais);
+            $('#estado').prop('readonly', false);
+            
+          }else{
+            confirm('Pais no Aceptado');
+          }
+
           return false;
         },
         change: function( event, ui ) {
