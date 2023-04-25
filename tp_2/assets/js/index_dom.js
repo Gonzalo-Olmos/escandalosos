@@ -48,7 +48,8 @@ $(document).ready(function() {
         },
         select: function(event, ui) {
           // Asignar valor seleccionado al input.
-          if ($.inArray(ui.item.descripcion, PAISESACEPTADOS) !== -1) {
+          let arreglo_paises = PAISESACEPTADOS['Paises'];
+          if ($.inArray(ui.item.descripcion, arreglo_paises) !== -1) {
 
             $( "#pais" ).val(ui.item.descripcion);
             $( "#id_pais" ).val(ui.item.id_pais);
