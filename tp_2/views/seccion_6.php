@@ -1,12 +1,3 @@
-<p>
-Utilizando el esquema de secciones dado en el TP2.2, crear una sección 6 que
-contenga 5 imágenes, cada una en un elemento figure del DOM, tal que se
-actualicen de forma aleatoria cada vez que se recargue la página utilizando este
-banco de imágenes: https://jsonplaceholder.typicode.com/photos .
-
-
-</p>
-
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -26,5 +17,5 @@ banco de imágenes: https://jsonplaceholder.typicode.com/photos .
   </div>
 </div>
 
-<div id="test" class="row justify-content-center gap-3" style="margin-bottom: 200px;"></div>
+<div id="test" class="row justify-content-center gap-3"></div>
 
