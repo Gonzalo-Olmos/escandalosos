@@ -1,11 +1,15 @@
 <?php include_once("common/header.php"); ?>
 
-<!--Consigna de tp  2.2 -->
 <div class="row mx-md-3" style="margin-top: 100px;">
+  <div class="col-md-6">
+    <button id="cambiarVista" class="btn btn-dark">DARK</button>
+  </div>
+</div>
+<!--Consigna de tp  2.2 -->
+<div class="row mx-md-3" >
   <h1 class="display-5 fw-bold"> Seccion 1</h1>
   <?php include_once("./seccion_1.php"); ?>
   
-<button id="cambiarVista" class="btn btn-dark">DARK</button>
 </div>
 <hr>
 <div class="row mx-md-3">
@@ -34,29 +38,5 @@
 <!--Consigna de tp  2.1 -->
 <div class="row mx-md-3 mx-auto" id="competidores"  style="margin-bottom: 100px;" >
 </div>
-<script src="../assets/js/datatables_competidores.js"></script>
-
-<script>
-   if (localStorage.getItem("background") === "dark" || localStorage.getItem("background") === null) {
-    document.querySelector('body').setAttribute('data-bs-theme','dark')
-  } else if (localStorage.getItem("background") === "light") {
-    document.querySelector('body').setAttribute('data-bs-theme','light')
-  }
-
-  document.getElementById('cambiarVista').addEventListener("click", function() {
-    if(localStorage.getItem("background") === "dark"){
-      document.querySelector('body').setAttribute('data-bs-theme','dark')
-      localStorage.setItem("background", "light");
-    }else{
-      document.querySelector('body').setAttribute('data-bs-theme','light')
-      localStorage.setItem("background", "dark");
-    }
-  });
-
-  const cambiarVista = (version) => {
-      
-
-  }
-</script>
 
 <?php include_once("common/footer.php"); ?>

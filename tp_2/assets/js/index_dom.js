@@ -1,6 +1,7 @@
 import {arregloCompetidores} from './arreglo_competidores.js';
 import {PAISESACEPTADOS} from './paises_aceptados.js';
 import {validarFormulario} from './cargar_competidor.js';
+import {cambio_de_tema} from './cambios_de_tema.js';
 import {competidores_tabla} from './datatables_competidores.js';
 
 // Variables
@@ -18,6 +19,8 @@ if(document.getElementById('competidores') !==  null){
 if(document.getElementById('competidorForm') !==  null){
     validarFormulario();
 }
+
+document.getElementById("cambiarVista").addEventListener("click", cambio_de_tema);
 
 $(document).ready(function() {
     $(function() {

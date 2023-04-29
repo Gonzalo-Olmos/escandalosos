@@ -1,4 +1,4 @@
-$('#competidores_tabla').DataTable( {
+export var competidores_tabla = $('#competidores_tabla').DataTable( {
             
     ajax:  {	
         type: "POST",	
