@@ -15,10 +15,10 @@
 
 <div class="row mx-md-3">
   
-<h1> Seccion 3 </h1>
+<!-- <h1> Seccion 3 </h1>
     <?php include_once("./seccion_3.php"); ?>
 </div>
-
+ -->
 
 <!--Consigna convinada de tp  2.3 y 2.1-->
 <div class="row mx-md-3" id="seccion4">

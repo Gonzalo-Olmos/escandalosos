@@ -1,4 +1,4 @@
-<div class="fixed-bottom container-fluid" style="background-color: #e3f2fd;">
+<div class=" container-fluid" style="background-color: #e3f2fd;">
     <footer class="d-flex flex-wrap justify-content-between align-items-center my-2">
         <div class="col-md-8 d-flex align-items-center">
             <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
