@@ -1,5 +1,5 @@
 <?php
-include_once "./conector/BaseDatos.php";
+include_once 'conector/BaseDatos.php';
 class Estado extends BaseDatos
 {
     private $id;
@@ -12,6 +12,7 @@ class Estado extends BaseDatos
      */
     public function __construct()
     {
+        parent::__construct();
         $this->id = "";
         $this->ubicacionpaisid = "";
         $this->estadonombre;
@@ -95,31 +96,6 @@ class Estado extends BaseDatos
         return $resultado;
     }
     **/
-    
-    public function buscar($id)
-    {
-        $base = new BaseDatos();
-        $resp = false;
-        $sql = "SELECT * FROM estado WHERE id = '" . $id . "'";
-        if ($base->Iniciar()) {
-            if ($base->Ejecutar($sql)) {
-                if ($row2 = $base->Registro()) {
-
-                    $dato = array (
-                        'id' =>$row2['id'],
-                        'estadonombre' => $row2['estadonombre']
-                    );
-
-                    $array[] = $dato;                
-                }
-            } else {
-                $this->setMensaje($base->getError());
-            }
-        } else {
-            $this->setMensaje($base->getError());
-        }
-        return $array;
-    }
 
     /**
      * Lista todos los estados que cumplan cierta condición
@@ -164,12 +140,11 @@ class Estado extends BaseDatos
             FROM estado
             WHERE  ( estadonombre LIKE '%$termino%') && ubicacionpaisid = $id_pais";
 
-        $base = new BaseDatos();
         $rta = false;
-        if ($base->Iniciar()) {
-            if ($base->Ejecutar($query)) {
+        if ($this->Iniciar()) {
+            if ($this->Ejecutar($query)) {
                 $array = array();
-                while ($row2 = $base->Registro()) {
+                while ($row2 = $this->Registro()) {
                     $array[] = array(
                         'value'=>$row2['id'],
                         'label'=> $row2['estadonombre']
@@ -178,11 +153,35 @@ class Estado extends BaseDatos
                 $rta = $array;
 
             } else {
-                $this->setMensaje($base->getError());
+                $this->setMensaje($this->getError());
             }
         } else {
-            $this->setMensaje($base->getError());
+            $this->setMensaje($this->getError());
         }
         return $rta;
+    }
+
+    public function buscar($id)
+    {
+     
+        $sql = "SELECT * FROM estado WHERE id = '" . $id . "'";
+        if ($this->Iniciar()) {
+            if ($this->Ejecutar($sql)) {
+                if ($row2 = $this->Registro()) {
+
+                    $dato = array (
+                        'id' =>$row2['id'],
+                        'estadonombre' => $row2['estadonombre']
+                    );
+
+                    $array[] = $dato;                
+                }
+            } else {
+                $this->setMensaje($this->getError());
+            }
+        } else {
+            $this->setMensaje($this->getError());
+        }
+        return $array;
     }
 }
