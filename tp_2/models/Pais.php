@@ -80,33 +80,6 @@ class Pais
         return $rta;
     }
 
-    public function obtener_estado_por_termino_autocompletado($termino,$id_pais){
-        $query="SELECT *
-            FROM estado
-            WHERE  ( estadonombre LIKE '%$termino%') && ubicacionpaisid = $id_pais";
-
-        $base = new BaseDatos();
-        $rta = false;
-        if ($base->Iniciar()) {
-            if ($base->Ejecutar($query)) {
-                $array = array();
-                while ($row2 = $base->Registro()) {
-                    $array[] = array(
-                        'value'=>$row2['id'],
-                        'label'=> $row2['estadonombre']
-                    );
-                }
-                $rta = $array;
-
-            } else {
-                $this->setMensaje($base->getError());
-            }
-        } else {
-            $this->setMensaje($base->getError());
-        }
-        return $rta;
-    }
-
     public function buscar($id)
     {
         $base = new BaseDatos();
@@ -130,31 +103,5 @@ class Pais
             $this->setMensaje($base->getError());
         }
         return $array;
-    }
-
-    public function buscar_estado($id)
-    {
-        $base = new BaseDatos();
-        $resp = false;
-        $sql = "SELECT * FROM estado WHERE id = '" . $id . "'";
-        if ($base->Iniciar()) {
-            if ($base->Ejecutar($sql)) {
-                if ($row2 = $base->Registro()) {
-
-                    $dato = array (
-                        'id' =>$row2['id'],
-                        'estadonombre' => $row2['estadonombre']
-                    );
-
-                    $array[] = $dato;                }
-            } else {
-                $this->setMensaje($base->getError());
-            }
-        } else {
-            $this->setMensaje($base->getError());
-        }
-        return $array;
-    }
-
-    
+    }   
 }

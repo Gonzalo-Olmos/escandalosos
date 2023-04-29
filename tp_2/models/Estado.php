@@ -68,7 +68,6 @@ class Estado extends BaseDatos
      * Busca estado por id
      * @param int $id
      * @return boolean
-     */
     public function buscar($id)
     {
         $resultado = false;
@@ -94,6 +93,32 @@ class Estado extends BaseDatos
         }
 
         return $resultado;
+    }
+    **/
+    
+    public function buscar($id)
+    {
+        $base = new BaseDatos();
+        $resp = false;
+        $sql = "SELECT * FROM estado WHERE id = '" . $id . "'";
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($sql)) {
+                if ($row2 = $base->Registro()) {
+
+                    $dato = array (
+                        'id' =>$row2['id'],
+                        'estadonombre' => $row2['estadonombre']
+                    );
+
+                    $array[] = $dato;                
+                }
+            } else {
+                $this->setMensaje($base->getError());
+            }
+        } else {
+            $this->setMensaje($base->getError());
+        }
+        return $array;
     }
 
     /**
@@ -132,5 +157,32 @@ class Estado extends BaseDatos
         }
 
         return $resultado;
+    }
+
+    public function obtener_estado_por_termino_autocompletado($termino,$id_pais){
+        $query="SELECT *
+            FROM estado
+            WHERE  ( estadonombre LIKE '%$termino%') && ubicacionpaisid = $id_pais";
+
+        $base = new BaseDatos();
+        $rta = false;
+        if ($base->Iniciar()) {
+            if ($base->Ejecutar($query)) {
+                $array = array();
+                while ($row2 = $base->Registro()) {
+                    $array[] = array(
+                        'value'=>$row2['id'],
+                        'label'=> $row2['estadonombre']
+                    );
+                }
+                $rta = $array;
+
+            } else {
+                $this->setMensaje($base->getError());
+            }
+        } else {
+            $this->setMensaje($base->getError());
+        }
+        return $rta;
     }
 }
