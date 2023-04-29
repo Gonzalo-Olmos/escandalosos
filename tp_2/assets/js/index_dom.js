@@ -1,4 +1,3 @@
-import {Competidor} from './competidor.js';
 import {arregloCompetidores} from './arreglo_competidores.js';
 import {PAISESACEPTADOS} from './paises_aceptados.js';
 import {validarFormulario} from './cargar_competidor.js';
