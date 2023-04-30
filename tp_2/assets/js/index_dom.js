@@ -189,3 +189,47 @@ $btnFin.addEventListener('click', () => {
   $btnFin.classList.add('disabled');
   $btnInicia.classList.remove('disabled');
 })
+
+
+
+
+
+
+/**Despliegue del menu hamburguesa con teclas
+ * Evento "Keydown" 
+ */
+
+let menuHamburguesa = document.getElementById("navbarNavAltMarkup");
+
+
+document.addEventListener("keydown", function(evento) {
+
+  if (evento.altKey && evento.key === "m") {
+    // código para desplegar el menú hamburguesa
+  
+    //Al volver a teclar se oculta si se está mostrando o se muestra en caso contrario
+    if(menuHamburguesa.classList.contains("show")){
+      menuHamburguesa.classList.remove("show");
+      //console.log(evento);
+    }else{
+      menuHamburguesa.classList.add("show");
+      //console.log(evento);
+    }
+
+  }
+});
+
+
+/** 
+ * Ocultar Menu Burger cuando se hace click en un enlace
+ */
+let enlaces = document.querySelectorAll(".nav-link"); 
+
+// Agregar un evento "click" a cada enlace de navegación
+enlaces.forEach(function(enlace) {
+  
+  enlace.addEventListener("click", function() {
+    menuHamburguesa.classList.remove("show");
+
+  });
+}); 
