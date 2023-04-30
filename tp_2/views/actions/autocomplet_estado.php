@@ -1,11 +1,11 @@
 <?php
-include("../../models/Pais.php");
+include("../../models/Estado.php");
 
 if(!empty($_POST)){
-    $objPais = new Pais();
+    $objEstado = new Estado();
     $estado = array();
 
-    $estado = $objPais->obtener_estado_por_termino_autocompletado($_POST['term'],$_POST['id_pais']);  
+    $estado = $objEstado->obtener_estado_por_termino_autocompletado($_POST['term'],$_POST['id_pais']);  
     echo json_encode($estado);
     exit;  
 }

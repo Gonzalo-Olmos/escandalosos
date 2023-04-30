@@ -1,5 +1,5 @@
 <?php
-include_once "./conector/BaseDatos.php";
+include_once 'conector/BaseDatos.php';
 class Estado extends BaseDatos
 {
     private $id;
@@ -12,6 +12,7 @@ class Estado extends BaseDatos
      */
     public function __construct()
     {
+        parent::__construct();
         $this->id = "";
         $this->ubicacionpaisid = "";
         $this->estadonombre;
@@ -68,7 +69,6 @@ class Estado extends BaseDatos
      * Busca estado por id
      * @param int $id
      * @return boolean
-     */
     public function buscar($id)
     {
         $resultado = false;
@@ -95,6 +95,7 @@ class Estado extends BaseDatos
 
         return $resultado;
     }
+    **/
 
     /**
      * Lista todos los estados que cumplan cierta condición
@@ -132,5 +133,55 @@ class Estado extends BaseDatos
         }
 
         return $resultado;
+    }
+
+    public function obtener_estado_por_termino_autocompletado($termino,$id_pais){
+        $query="SELECT *
+            FROM estado
+            WHERE  ( estadonombre LIKE '%$termino%') && ubicacionpaisid = $id_pais";
+
+        $rta = false;
+        if ($this->Iniciar()) {
+            if ($this->Ejecutar($query)) {
+                $array = array();
+                while ($row2 = $this->Registro()) {
+                    $array[] = array(
+                        'value'=>$row2['id'],
+                        'label'=> $row2['estadonombre']
+                    );
+                }
+                $rta = $array;
+
+            } else {
+                $this->setMensaje($this->getError());
+            }
+        } else {
+            $this->setMensaje($this->getError());
+        }
+        return $rta;
+    }
+
+    public function buscar($id)
+    {
+     
+        $sql = "SELECT * FROM estado WHERE id = '" . $id . "'";
+        if ($this->Iniciar()) {
+            if ($this->Ejecutar($sql)) {
+                if ($row2 = $this->Registro()) {
+
+                    $dato = array (
+                        'id' =>$row2['id'],
+                        'estadonombre' => $row2['estadonombre']
+                    );
+
+                    $array[] = $dato;                
+                }
+            } else {
+                $this->setMensaje($this->getError());
+            }
+        } else {
+            $this->setMensaje($this->getError());
+        }
+        return $array;
     }
 }

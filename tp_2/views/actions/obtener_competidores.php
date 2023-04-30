@@ -1,10 +1,11 @@
 <?php
 include_once("../../models/Competidor.php");
 include("../../models/Pais.php");
+include("../../models/Estado.php");
 
 $objCompetidor = new Competidor();
 $objPais = new Pais();
-
+$objEstado = new Estado();
 $competidores = array();
 
 $arreglo_competidores = $objCompetidor->listar(true);
@@ -12,9 +13,8 @@ $arreglo_competidores = $objCompetidor->listar(true);
 $acciones = array();
 
 foreach ($arreglo_competidores as $value) {
-
     $pais = $objPais->buscar($value['idpais']);
-    $estado = $objPais->buscar_estado($value['idestado']);
+    $estado = $objEstado->buscar($value['idestado']);
 
     $competidores[] = [
         $value['gal'],
