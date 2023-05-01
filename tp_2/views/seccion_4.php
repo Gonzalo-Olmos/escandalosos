@@ -3,10 +3,13 @@
   <div class="col-md-4">
     <label for="validationCustom01" class="form-label">GAL (Global Athletic License)</label>
     <input name="gal" type="text" class="form-control form-competidor" id="validationCustom01"  pattern="^[a-zA-Z]{3}[0-9]{7}$" value="" maxlength="10" required>
+    <div id="gal_error" style="color:red;display:none">
+      Este Gal ya se encuentra registrado.
+    </div>
     <div class="valid-feedback">
       Correcto!
     </div>
-    <div class="invalid-feedback" id="gal_error">
+    <div class="invalid-feedback">
       Debe ingresar un GAL valido (Ejemplo: AAA1234567).
     </div>
   </div> 

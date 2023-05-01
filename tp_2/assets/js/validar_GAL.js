@@ -8,6 +8,7 @@ export function validar_gal(){
         },
         success: function(data){
             if(data['success'] === '0'){	
+                $('.valid-feedback').css("display","none");
                 confirm(data['texto']);
                 $("#validationCustom01").css("border", "1px solid red");
                 $("#gal_error").css("display", "block");
