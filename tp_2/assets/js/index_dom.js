@@ -2,7 +2,9 @@ import {arregloCompetidores} from './arreglo_competidores.js';
 import {PAISESACEPTADOS} from './paises_aceptados.js';
 import {validarFormulario} from './cargar_competidor.js';
 import {cambio_de_tema} from './cambios_de_tema.js';
+import {validar_gal} from './validar_GAL.js'; 
 import {competidores_tabla} from './datatables_competidores.js';
+
 
 // Variables
 let tarjetas = "";
@@ -21,6 +23,8 @@ if(document.getElementById('competidorForm') !==  null){
 }
 
 document.getElementById("cambiarVista").addEventListener("click", cambio_de_tema);
+
+document.getElementById("validationCustom01").addEventListener('input', function() {validar_gal();});
 
 $(document).ready(function() {
     $(function() {
@@ -108,6 +112,11 @@ $(document).ready(function() {
         minLength: 2 // Mínimo de caracteres a escribir para que aparezcan sugerencias.
       });
     });
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      $($.fn.dataTable.tables(true)).css('width', '100%');
+      $($.fn.dataTable.tables( true ) ).DataTable().columns.adjust().draw();
+      }); 
   });
 
 function limpiar_datos_paises(){

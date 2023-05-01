@@ -6,7 +6,7 @@
     <div class="valid-feedback">
       Correcto!
     </div>
-    <div class="invalid-feedback">
+    <div class="invalid-feedback" id="gal_error">
       Debe ingresar un GAL valido (Ejemplo: AAA1234567).
     </div>
   </div> 
