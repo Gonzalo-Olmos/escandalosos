@@ -22,7 +22,8 @@ if(document.getElementById('competidorForm') !==  null){
     validarFormulario();
 }
 
-document.getElementById("cambiarVista").addEventListener("click", cambio_de_tema);
+document.getElementById("cambiarVista_negro").addEventListener("click", cambio_de_tema);
+document.getElementById("cambiarVista_blanco").addEventListener("click", cambio_de_tema);
 
 document.getElementById("validationCustom01").addEventListener('input', function() {validar_gal();});
 

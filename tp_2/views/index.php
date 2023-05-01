@@ -2,7 +2,8 @@
 
 <div class="row mx-md-3" style="margin-top: 100px;">
   <div class="col-md-6">
-    <button id="cambiarVista" class="btn btn-dark">DARK</button>
+    <button id="cambiarVista_negro" class="btn btn-dark">Dark</button>
+    <button id="cambiarVista_blanco" class="btn btn-light" style="display:none;">Light</button>
   </div>
 </div>
 <!--Consigna de tp  2.2 -->
