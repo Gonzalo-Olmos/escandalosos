@@ -1,7 +1,7 @@
 <div class="row ">
     <div class="table-responsive">
         <table id="competidores_tabla"
-            class="table hover table-bordered nowrap border">
+            class="table hover table-light table-bordered nowrap border">
             <thead class="flip-content">
                 <tr>
                     <th data-priority="1"> GAL </th>
