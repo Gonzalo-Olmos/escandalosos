@@ -5,7 +5,8 @@ import {cambio_de_tema} from './cambios_de_tema.js';
 import { chequearValidez } from './validar_formulario.js';
 import {competidores_tabla} from './datatables_competidores.js';
 
-
+let arreglo_paises = PAISESACEPTADOS['Paises'];
+          
 // Variables
 let tarjetas = "";
 
@@ -43,20 +44,28 @@ $(document).ready(function() {
             },
             success: function( data ) {
                 response($.map(data, function(pais) {
+                  if ($.inArray(pais.label, arreglo_paises) !== -1) {
                     return {	
-                            value:pais.value,              
-                            label:pais.label,
-                            id_pais: pais.value,	
-                            descripcion: pais.label,						           
+                      value:pais.value,              
+                      label:pais.label,
+                      id_pais: pais.value,	
+                      descripcion: pais.label,						           
                     };
+                  }else{
+                    return {	
+                      value:pais.value,              
+                      label:"[No disponible] "+pais.label,
+                      id_pais: pais.value,	
+                      descripcion: pais.label,						           
+                    };
+                  }
                 }));
             }
           });
         },
         select: function(event, ui) {
           // Asignar valor seleccionado al input.
-          let arreglo_paises = PAISESACEPTADOS['Paises'];
-          if ($.inArray(ui.item.descripcion, arreglo_paises) !== -1) {
+         if ($.inArray(ui.item.descripcion, arreglo_paises) !== -1) {
 
             $( "#pais" ).val(ui.item.descripcion);
             $( "#id_pais" ).val(ui.item.id_pais);
