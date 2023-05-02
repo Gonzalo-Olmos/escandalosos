@@ -217,9 +217,9 @@ class Competidor
     {
         $array = null;
         $base = new BaseDatos();
-        $sql =  "select * from competidor";
+        $sql =  "SELECT * FROM competidor";
         if ($condicion != '') {
-            $sql = $sql . ' where ' . $condicion;
+            $sql = $sql . ' WHERE ' . $condicion;
         }
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {

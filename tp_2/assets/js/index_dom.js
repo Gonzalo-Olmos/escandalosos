@@ -1,8 +1,8 @@
 import {arregloCompetidores} from './arreglo_competidores.js';
 import {PAISESACEPTADOS} from './paises_aceptados.js';
-import {validarFormulario} from './cargar_competidor.js';
+import {validarFormulario} from './validar_formulario.js';
 import {cambio_de_tema} from './cambios_de_tema.js';
-import {validar_gal} from './validar_GAL.js'; 
+import { chequearValidez } from './validar_formulario.js';
 import {competidores_tabla} from './datatables_competidores.js';
 
 
@@ -25,7 +25,7 @@ if(document.getElementById('competidorForm') !==  null){
 document.getElementById("cambiarVista_negro").addEventListener("click", cambio_de_tema);
 document.getElementById("cambiarVista_blanco").addEventListener("click", cambio_de_tema);
 
-document.getElementById("validationCustom01").addEventListener('input', function() {validar_gal();});
+// document.getElementById("validationCustom01").addEventListener('input', function() {validar_gal();});
 
 $(document).ready(function() {
     $(function() {
@@ -63,7 +63,9 @@ $(document).ready(function() {
             $('#estado').prop('readonly', false);
             
           }else{
-            confirm('Pais no Aceptado');
+            $("#pais").val(null);
+            $("#id_pais").val(null);
+            chequearValidez(document.getElementById("pais"));
           }
 
           return false;

@@ -1,5 +1,5 @@
 
-export function cambio_de_tema(){
+export const cambio_de_tema = () => {
     let tabla = document.querySelector('.table');
 
     if (localStorage.getItem("background") === "dark" || localStorage.getItem("background") === null) {
@@ -45,10 +45,4 @@ export function cambio_de_tema(){
           $("#cambiarVista_blanco").css("display", "none");
         }
       });
-    
-      const cambiarVista = (version) => {
-          
-    
-      }
-
 }

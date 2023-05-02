@@ -34,7 +34,7 @@
 <!--Consigna convinada de tp  2.3-->
 <div class="row mx-md-3" id="seccion5">
   <h1 class="display-5 fw-bold"> Competidores </h1>
-    <?php include_once("./seccion_5.php"); ?>
+    <?php // include_once("./seccion_5.php"); ?>
 </div>
 <hr>
 <!--Consigna de tp  2.3 -->
