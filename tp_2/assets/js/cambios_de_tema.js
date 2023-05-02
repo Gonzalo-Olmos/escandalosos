@@ -45,4 +45,6 @@ export const cambio_de_tema = () => {
           $("#cambiarVista_blanco").css("display", "none");
         }
       });
+
+      document.querySelector('nav').setAttribute('data-bs-theme','light');
 }

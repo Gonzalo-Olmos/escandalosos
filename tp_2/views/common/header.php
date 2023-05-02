@@ -28,30 +28,30 @@
 
 
 
-    <nav class="navbar fixed-top navbar-light" style="background-color: #e3f2fd;">
+    <nav class="navbar fixed-top bg-info">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.php"><img  class="navbar-brand" width="100"  src="../assets/img/logo_poomsae1.png" alt="Logo"></a>
-    <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <ul class="navbar-nav ms-auto ">
+      <ul class="navbar-nav ms-auto">
 
         <li class="nav-item">
-          <a class="nav-link" href="#seccion1">Sección 1</a>
+          <a class="nav-link text-dark" href="#seccion1">Sección 1</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#seccion2">Sección 2</a>
+          <a class="nav-link text-dark" href="#seccion2">Sección 2</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#seccion4">Sección 4</a>
+          <a class="nav-link text-dark" href="#seccion4">Sección 4</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#seccion5">Sección 5</a>
+          <a class="nav-link text-dark" href="#seccion5">Sección 5</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#seccion6">Sección 6</a>
+          <a class="nav-link text-dark" href="#seccion6">Sección 6</a>
         </li>
       </ul>
     </div>
