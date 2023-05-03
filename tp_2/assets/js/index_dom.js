@@ -68,23 +68,20 @@ $(document).ready(function() {
                     };
                   }
                 }));
-            }
+              }
           });
         },
         select: function(event, ui) {
           // Asignar valor seleccionado al input.
          if ($.inArray(ui.item.descripcion, arreglo_paises) !== -1) {
-
             $( "#pais" ).val(ui.item.descripcion);
             $( "#id_pais" ).val(ui.item.id_pais);
-            limpiar_datos_estado();
+            limpiar_datos_estado(false);
             $('#estado').prop('readonly', false);
-            chequearValidez(document.getElementById("pais"));
             
           }else{
             limpiar_datos_paises();
             limpiar_datos_estado();
-            chequearValidez(document.getElementById("pais"));
           }
 
           return false;
@@ -92,6 +89,7 @@ $(document).ready(function() {
         change: function( event, ui ) {
             if(ui.item==null){
                 limpiar_datos_paises();
+                limpiar_datos_estado();
                 $('#estado').prop('readonly', true);
             }
         },
@@ -124,6 +122,7 @@ $(document).ready(function() {
           // Asignar valor seleccionado al input.
           $( "#estado" ).val(ui.item.descripcion);
           $( "#id_estado" ).val(ui.item.id_estado);
+          
           return false;
         },
         change: function( event, ui ) {
@@ -144,11 +143,15 @@ $(document).ready(function() {
 function limpiar_datos_paises(){
     $('#id_pais').val(null);
     $('#pais').val(null);
+    chequearValidez(document.getElementById("pais"));
 }
 
-function limpiar_datos_estado(){
+function limpiar_datos_estado(chequear=true){
   $('#id_estado').val(null);
   $('#estado').val(null);
+  if(chequear){
+    chequearValidez(document.getElementById("estado"));
+  }
 }
 
 
