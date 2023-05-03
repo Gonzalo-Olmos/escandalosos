@@ -23,7 +23,12 @@ if(document.getElementById('competidorForm') !==  null){
 }
 
 //Temas
-cambio_de_tema(localStorage.getItem('background'));
+if(localStorage.getItem('background') == null){
+  cambio_de_tema("dark");
+}else{
+  cambio_de_tema(localStorage.getItem('background'));
+}
+
 document.getElementById("cambiarVista_negro").addEventListener("click", () => {
   cambio_de_tema("dark")
 });
