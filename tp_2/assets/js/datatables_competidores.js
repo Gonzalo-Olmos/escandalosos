@@ -28,23 +28,4 @@ export var competidores_tabla = $('#competidores_tabla').DataTable( {
     },
     
     "lengthMenu": [[5,10,15,-1], [5,10,15, "Todos"]],
-    buttons: [
-            {
-                extend: 'pageLength',
-                text:      '<i class="fa fa-eye"></i> Elementos',
-                className: 'buttons-excel buttons-html5 btn blue btn-outline',                      
-                
-            },     
-            {
-                extend: 'excelHtml5',
-                text:      '<i class="fa fa-file-excel-o"></i> Excel',
-                className: 'buttons-excel buttons-html5 btn blue btn-outline',
-                title: 'Exportar_excel'
-            }                                             
-    ],
-    "columnDefs": [	 
-        {   'targets': 0,
-        },           
-    ], 
-    "order": [[ 0, "desc" ]]
 } );	
