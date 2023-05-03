@@ -11,14 +11,7 @@ export const enviar = () => {
         },
         success: (response) => {
             if(response['success'] === 1){	
-                $.ajax({
-                    url: "actions/registrar_competidor.php",
-                    type: "POST",
-                    data: $("#competidorForm").serialize(),
-                    success: function(result) {
-                        location.reload();
-                    },
-                });
+                enviar_formulario($("#competidorForm").serialize());
             }else{
                 response['errors'].forEach((el) => {
                     let $campo = $('#'+el['campo']);
@@ -32,4 +25,15 @@ export const enviar = () => {
       });
 
     return esValido;
+}
+
+function enviar_formulario(formulario){
+    $.ajax({
+        url: "actions/registrar_competidor.php",
+        type: "POST",
+        data:formulario,
+        success: function(result) {
+            location.reload();
+        },
+    });
 }
