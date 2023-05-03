@@ -77,13 +77,14 @@ $(document).ready(function() {
 
             $( "#pais" ).val(ui.item.descripcion);
             $( "#id_pais" ).val(ui.item.id_pais);
+            limpiar_datos_estado();
             $('#estado').prop('readonly', false);
+
             
           }else{
             $("#pais").val(null);
             $("#id_pais").val(null);
-            $( "#pais" ).val(null);
-            $( "#id_pais" ).val(null);
+            limpiar_datos_estado();
             chequearValidez(document.getElementById("pais"));
           }
 
