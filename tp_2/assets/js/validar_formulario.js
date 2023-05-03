@@ -1,4 +1,4 @@
-import { validarAjax } from "./validar_ajax.js";
+import { enviar } from "./validar_ajax.js";
 
 export const chequearValidez = (input) => {
     if(input.checkValidity()){
@@ -33,15 +33,9 @@ export const validarFormulario = () => {
         })
 
         // Si está validado, creamos objeto y mostramos
-        if($form.checkValidity() && validarAjax()){
-            $.ajax({
-                url: "actions/registrar_competidor.php",
-                type: "POST",
-                data: $("#competidorForm").serialize(),
-                success: function(result) {
-                    location.reload();
-                },
-            });
+        if($form.checkValidity()){
+            enviar();
+            
         }
     });
 }

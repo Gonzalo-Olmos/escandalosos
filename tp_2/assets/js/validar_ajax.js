@@ -1,4 +1,4 @@
-export const validarAjax = () => {
+export const enviar = () => {
     let esValido = false;
     $.ajax({
         type:"POST",
@@ -11,7 +11,14 @@ export const validarAjax = () => {
         },
         success: (response) => {
             if(response['success'] === 1){	
-                esValido = true;
+                $.ajax({
+                    url: "actions/registrar_competidor.php",
+                    type: "POST",
+                    data: $("#competidorForm").serialize(),
+                    success: function(result) {
+                        location.reload();
+                    },
+                });
             }else{
                 response['errors'].forEach((el) => {
                     let $campo = $('#'+el['campo']);
