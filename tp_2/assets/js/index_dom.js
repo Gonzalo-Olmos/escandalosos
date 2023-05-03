@@ -54,7 +54,7 @@ $(document).ready(function() {
                   }else{
                     return {	
                       value:pais.value,              
-                      label:"[No disponible] "+pais.label,
+                      label:pais.label+" [No disponible]",
                       id_pais: pais.value,	
                       descripcion: pais.label,						           
                     };
