@@ -77,6 +77,8 @@ $(document).ready(function() {
           }else{
             $("#pais").val(null);
             $("#id_pais").val(null);
+            $( "#pais" ).val(null);
+            $( "#id_pais" ).val(null);
             chequearValidez(document.getElementById("pais"));
           }
 
