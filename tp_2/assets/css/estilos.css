@@ -66,8 +66,8 @@
 @media (max-width: 768px) {
   .navbar-toggler {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 1rem;
+    right: 1rem;
     background-color: #e3f2fd;
     border-color: rgb(39, 141, 131);
   }

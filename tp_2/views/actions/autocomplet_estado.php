@@ -1,5 +1,5 @@
 <?php
-include("../../models/Estado.php");
+include_once("../../configuracion.php");
 
 if(!empty($_POST)){
     $objEstado = new Estado();

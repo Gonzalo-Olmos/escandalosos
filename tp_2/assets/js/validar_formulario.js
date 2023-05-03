@@ -39,8 +39,7 @@ export const validarFormulario = () => {
                 type: "POST",
                 data: $("#competidorForm").serialize(),
                 success: function(result) {
-                    console.log(result);
-                    // location.reload(); // modificar
+                    location.reload();
                 },
             });
         }

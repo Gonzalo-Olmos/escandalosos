@@ -1,5 +1,5 @@
 <?php
-include("../../models/Pais.php");
+include_once("../../configuracion.php");
 
 if(!empty($_POST)){
     $objPais = new Pais();

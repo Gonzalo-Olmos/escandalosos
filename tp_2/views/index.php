@@ -1,13 +1,7 @@
 <?php include_once("common/header.php"); ?>
 
-<div class="row mx-md-3" style="margin-top: 100px;">
-  <div class="col-md-6">
-    <button id="cambiarVista_negro" class="btn btn-dark">Dark</button>
-    <button id="cambiarVista_blanco" class="btn btn-light" style="display:none;">Light</button>
-  </div>
-</div>
 <!--Consigna de tp  2.2 -->
-<div class="row mx-md-3" id="seccion1">
+<div class="row mx-md-3" style="margin-top:110px;" id="seccion1">
   <h1 class="display-5 fw-bold"> Seccion 1</h1>
   <?php include_once("./seccion_1.php"); ?>
   
@@ -17,7 +11,7 @@
 <h1 class="display-5 fw-bold"> Seccion 2 </h1>
     <?php include_once("./seccion_2.php"); ?>
 </div>
-
+<hr>
 <div class="row mx-md-3">
   
 <!-- <h1> Seccion 3 </h1>

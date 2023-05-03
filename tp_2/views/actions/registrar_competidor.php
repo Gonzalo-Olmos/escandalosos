@@ -1,14 +1,16 @@
 <?php
-include_once("../../models/Competidor.php");
+include_once("../../configuracion.php");
+
+$datos = data_submitted();
 
 
-if(!empty($_POST)){
+if(!empty($datos)){
     $objCompetidor = new Competidor();
 
 
-    $objCompetidor->cargar($_POST['gal'], $_POST['apellido'], $_POST['nombre'],
-     $_POST['du'], $_POST['fechaNac'], $_POST['id_pais'],$_POST['id_estado'], $_POST['graduacion'], 
-     $_POST['clasificacionGral'], $_POST['email'], $_POST['genero']);
+    $objCompetidor->cargar($datos['gal'], $datos['apellido'], $datos['nombre'],
+     $datos['du'], $datos['fechaNac'], $datos['id_pais'],$datos['id_estado'], $datos['graduacion'], 
+     $datos['clasificacionGral'], $datos['email'], $datos['genero']);
 
 
     $objCompetidor->insertar();

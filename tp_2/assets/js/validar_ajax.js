@@ -10,7 +10,7 @@ export const validarAjax = () => {
             du: $('#validationCustom10').val()
         },
         success: (response) => {
-            if(response['success'] === '0'){	
+            if(response['success'] === 1){	
                 esValido = true;
             }else{
                 response['errors'].forEach((el) => {

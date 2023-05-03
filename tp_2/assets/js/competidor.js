@@ -59,9 +59,9 @@ export class Competidor {
 	getPerfil() {
 		return `
 		<div class="col-12 col-md-6 col-lg-4 mb-2 mx-auto">
-			<div class="card shadow-sm">
+			<div class="card rounded shadow p-2">
 			
-			<img src="../assets/img/logo_poomsae1.png" class=" card-img-top">
+			<img src="../assets/img/logo_poomsae2.png" class=" card-img-top">
 			<div class="card-body">
 				<p class="card-text">
 				

@@ -1,7 +1,5 @@
 <?php
-include_once("../../models/Competidor.php");
-include("../../models/Pais.php");
-include("../../models/Estado.php");
+include_once("../../configuracion.php");
 
 $objCompetidor = new Competidor();
 $objPais = new Pais();

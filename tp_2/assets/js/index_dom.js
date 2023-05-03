@@ -1,3 +1,4 @@
+// Modulos
 import {arregloCompetidores} from './arreglo_competidores.js';
 import {PAISESACEPTADOS} from './paises_aceptados.js';
 import {validarFormulario} from './validar_formulario.js';
@@ -5,13 +6,11 @@ import {cambio_de_tema} from './cambios_de_tema.js';
 import { chequearValidez } from './validar_formulario.js';
 import {competidores_tabla} from './datatables_competidores.js';
 
-let arreglo_paises = PAISESACEPTADOS['Paises'];
-          
 // Variables
+let arreglo_paises = PAISESACEPTADOS['Paises'];
 let tarjetas = "";
 
-// Index
-
+// Script
 for (let i = 0; i < arregloCompetidores.length; i++) {
     tarjetas += arregloCompetidores[i].getPerfil();
 }
@@ -23,10 +22,14 @@ if(document.getElementById('competidorForm') !==  null){
     validarFormulario();
 }
 
-document.getElementById("cambiarVista_negro").addEventListener("click", cambio_de_tema);
-document.getElementById("cambiarVista_blanco").addEventListener("click", cambio_de_tema);
-
-// document.getElementById("validationCustom01").addEventListener('input', function() {validar_gal();});
+//Temas
+cambio_de_tema(localStorage.getItem('background'));
+document.getElementById("cambiarVista_negro").addEventListener("click", () => {
+  cambio_de_tema("dark")
+});
+document.getElementById("cambiarVista_blanco").addEventListener("click", () => {
+  cambio_de_tema("light")
+});
 
 $(document).ready(function() {
     $(function() {

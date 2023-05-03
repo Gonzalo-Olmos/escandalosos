@@ -10,6 +10,7 @@ class BaseDatos extends PDO {
   	private $conec;
   	private $indice;
   	private $resultado;
+    private $sql;
     
     public function __construct(){
         $this->engine = 'mysql';
