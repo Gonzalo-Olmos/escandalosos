@@ -79,11 +79,10 @@ $(document).ready(function() {
             $( "#id_pais" ).val(ui.item.id_pais);
             limpiar_datos_estado();
             $('#estado').prop('readonly', false);
-
+            chequearValidez(document.getElementById("pais"));
             
           }else{
-            $("#pais").val(null);
-            $("#id_pais").val(null);
+            limpiar_datos_paises();
             limpiar_datos_estado();
             chequearValidez(document.getElementById("pais"));
           }
@@ -143,13 +142,13 @@ $(document).ready(function() {
   });
 
 function limpiar_datos_paises(){
-    $('#id_pais').val("");
-    $('#pais').val("");
+    $('#id_pais').val(null);
+    $('#pais').val(null);
 }
 
 function limpiar_datos_estado(){
-  $('#id_estado').val("");
-  $('#estado').val("");
+  $('#id_estado').val(null);
+  $('#estado').val(null);
 }
 
 
