@@ -14,7 +14,6 @@
                     <th data-priority="3"> Clasificacion general </th>
                     <th data-priority="3"> Email </th>
                     <th data-priority="3"> Genero </th>
-                    <th data-priority="3"> Acciónes </th>
                 </tr>
             </thead>
             <tbody>
@@ -32,7 +31,6 @@
                     <th> Clasificacion general </th>
                     <th> Email </th>
                     <th> Genero </th>
-                    <th width="3%"> Acciónes </th>
                 </tr>
             </tfoot>
 

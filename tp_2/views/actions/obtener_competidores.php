@@ -8,8 +8,6 @@ $competidores = array();
 
 $arreglo_competidores = $objCompetidor->listar(true);
 
-$acciones = array();
-
 foreach ($arreglo_competidores as $value) {
     $pais = $objPais->buscar($value['idpais']);
     $estado = $objEstado->buscar($value['idestado']);
@@ -24,8 +22,7 @@ foreach ($arreglo_competidores as $value) {
         $value['graduacion'],
         $value['clasificacionGeneral'],
         $value['email'],
-        $value['genero'],
-        implode('|',$acciones),
+        $value['genero']
     ];
 }
 echo json_encode($competidores);
